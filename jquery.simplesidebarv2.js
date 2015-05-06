@@ -78,16 +78,30 @@
 			$('body, html').css({
 				overflow: 'hidden'
 			});
+			
+			$('body, html').attr('[data-' + data + '-overflow="false"]' );
 		};
 		overflowTrue = function() {
 			$('body, html').css({
 				overflow: 'auto'
 			});
+			
+			$('body, html').attr('[data-' + data + '-overflow="true"]' );
 		};
+		
+		$( 'body, html' ).data(data + '-overflow' , true);
 
 		$opener.click(function() {
 			var isWhat = $sidebar.attr('data-' + data);
 			var csbw = $sidebar.width();
+			
+			var bodyData = $('body, html').data( data + '-overflow' );
+		
+			if ( bodyData === 'true' ) {
+				console.log( 'merda' );
+			} else if ( bodyData === 'false' ) {
+				console.log( 'shit' );
+			}
 
 			if (isWhat === 'disabled') {
 				$sidebar
