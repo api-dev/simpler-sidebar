@@ -32,6 +32,13 @@
 	@include boxShadow((0px 0px 0px 0px rgba(0, 0, 0, 0)))
 }
 
+.sidebar-wrapper {
+    position: relative;
+    height: 100%;
+    overflow-y:  auto;
+	overflow-x: hidden;
+}
+
 .sidebar-header {
 	padding: 1em;
 }

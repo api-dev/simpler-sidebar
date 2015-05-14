@@ -872,15 +872,24 @@ blockquote {
 dfn {
   font-weight: 500; }
 
+i {
+  font-weight: inherit;
+  font-style: italic; }
+
 mark {
   background-color: #ff5722;
   padding: 0 .3em; }
 
+dl dl {
+  margin-left: 14pt; }
+
 dt {
-  font-weight: 500; }
+  font-weight: 500;
+  margin-top: 5pt; }
 
 dd {
-  margin: 0; }
+  margin: 0;
+  margin-bottom: 10pt !important; }
   dd:before {
     content: "\2014"; }
 
@@ -1212,6 +1221,12 @@ section, .section {
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   -mox-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent; }
+
+.sidebar-wrapper {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden; }
 
 .sidebar-header {
   padding: 1em; }

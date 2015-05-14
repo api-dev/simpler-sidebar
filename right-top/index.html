@@ -42,7 +42,25 @@
 		    </div>
 		</header>
 		
-		<h3>Under contstruction</h3>
+		<h3>Read the entire Set-Up guide <a href="../index">here</a></h3>
+		
+		<h4>How to install this sidebar:</h4>
+ <pre>
+ $( document ).ready(function() {
+    $( '#sidebar' ).simplerSidebar({
+        opener: '#toggle-sidebar',
+        dataName: 'sb-right',
+        animation: {
+            easing: 'easeOutQuint'
+        },
+        sidebar: {
+            width: 300,
+            closingLinks: '.close-sb',
+        }
+    });
+});
+ </pre>
+ 
 	</div>
 		
 	<!--NAVBAR-->
@@ -74,32 +92,34 @@
     
     <!--SIDEBAR-->
     <div id="sidebar" class="theme-accent sidebar sidebar-right">
-        <header class="sidebar-header">
-            <div class="logo logo-picture logo-sidebar">
-                <a href="http://davidedc.altervista.org">
-                    <img class="rounded" src="http://graph.facebook.com/dcdeiv/picture?type=large" alt="dcdeiv" width="64px" height="64px">
-                </a>
-            </div>
-            <h3>Simpler Sidebar</h3>
-        </header>
-        
-        <div class="nav nav-sidebar">
-			<nav>
-				<ul>
-					<li><a class="close-sb" href="../index.html">Home</a></li>
-					<li><a class="close-sb" href="http://github.com/dcdeiv/simpler-sidebar" target="_blank"">Github</a></li>
-				</ul>
-			</nav>
+        <div class="sidebar-wrapper">
+            <header class="sidebar-header">
+                <div class="logo logo-picture logo-sidebar">
+                    <a href="http://davidedc.altervista.org">
+                        <img class="rounded" src="http://graph.facebook.com/dcdeiv/picture?type=large" alt="dcdeiv" width="64px" height="64px">
+                    </a>
+                </div>
+                <h3>Simpler Sidebar</h3>
+            </header>
+            
+            <div class="nav nav-sidebar">
+			    <nav>
+				    <ul>
+					    <li><a class="close-sb" href="../index.html">Home</a></li>
+					    <li><a class="close-sb" href="http://github.com/dcdeiv/simpler-sidebar" target="_blank"">Github</a></li>
+				    </ul>
+			    </nav>
 			
-			<nav>
-	            <ul>
-	                <li class="nav-title">Demos</li>
-	                <li><a href="../right/index.html">Right</a></li>
-	                <li>Right-Top</li>
-	                <li><a href="../left/index.html">Left</a></li>
-	                <li><a href="../left-top/index.html">Left-Top</a></li>
-	            </ul>
-	        </nav>
+			    <nav>
+	                <ul>
+	                    <li class="nav-title">Demos</li>
+	                    <li><a href="../right/index.html">Right</a></li>
+	                    <li>Right-Top</li>
+	                    <li><a href="../left/index.html">Left</a></li>
+	                    <li><a href="../left-top/index.html">Left-Top</a></li>
+	                </ul>
+	            </nav>
+            </div>
 		</div>
     </div>
     <!--SIDEBAR-->
