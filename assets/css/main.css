@@ -801,7 +801,7 @@
   content: "\e260"; }
 
 body, html {
-  background-color: #e8e8e8;
+  background-color: #fff;
   font-family: "Roboto", sans-serif;
   font-size: 14pt;
   -ms-text-size-adjust: 14pt;
@@ -953,6 +953,8 @@ nav ul {
   padding: 0;
   margin: 0;
   list-style-type: none; }
+nav li {
+  padding-bottom: 8pt; }
 
 button, input, select {
   font-weight: 400 !important;
@@ -1142,17 +1144,14 @@ section, .section {
   display: block; }
 
 .logo-navbar {
-  line-height: 60px; }
+  line-height: 0;
+  padding-top: 14px; }
+  .logo-navbar img {
+    height: 32px; }
 
 .logo-text {
   font-family: "Cookie", cursive;
   font-size: 18pt; }
-
-.logo-picture {
-  line-height: 0;
-  padding-top: 14px; }
-  .logo-picture img {
-    height: 32px; }
 
 .navbar-content {
   line-height: 60px; }
@@ -1182,20 +1181,49 @@ section, .section {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 300px; }
+  width: 300px;
+  font-size: 12pt;
+  -ms-text-size-adjust: 12pt;
+  -webkit-text-size-adjust: 12pt; }
+  .sidebar h3 {
+    padding-top: 1em;
+    margin: 0;
+    font-size: 14pt;
+    -ms-text-size-adjust: 14pt;
+    -webkit-text-size-adjust: 14pt; }
+  .sidebar a, .sidebar a:link, .sidebar a:visited, .sidebar a:hover, .sidebar a:active {
+    font-size: inherit;
+    -ms-text-size-adjust: inherit;
+    -webkit-text-size-adjust: inherit; }
 
 .sidebar-right {
-  right: 300px; }
+  right: 300px;
+  -webkit-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  -mox-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.5); }
 
 .sidebar-left {
-  left: 300px; }
+  left: 300px;
+  -webkit-box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  -mox-box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.5); }
 
-.nav-sidebar {
-  padding-top: 1em !important; }
-  .nav-sidebar ul li {
-    height: 20pt;
-    line-height: 20pt;
-    padding: 8pt 16pt; }
+[data-sb-right="disabled"] {
+  -webkit-box-shadow: 0px 0px 0px 0px transparent;
+  -mox-box-shadow: 0px 0px 0px 0px transparent;
+  box-shadow: 0px 0px 0px 0px transparent; }
+
+.sidebar-header {
+  padding: 1em; }
+
+.logo-sidebar {
+  width: 64px;
+  height: 64px; }
+
+.nav-sidebar ul li {
+  height: 20pt;
+  line-height: 20pt;
+  padding: 8pt 16pt; }
 
 #support {
   text-align: center;

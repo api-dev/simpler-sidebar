@@ -21,6 +21,12 @@ $glyph-name: 'glyphicons-halflings-regular';
 	border-radius: $radius;
 }
 
+@mixin boxShadow($shadow) {
+	-webkit-box-shadow: $shadow;
+	-mox-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
 @import 'format';
 
 @import 'inputs';

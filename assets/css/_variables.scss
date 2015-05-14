@@ -4,7 +4,7 @@
 // ** PALETTE **
 //
 // - Primary
-$primaryColor: #e8e8e8;
+$primaryColor: #fff;
 $primaryText: #2e2e2e;
 $primaryLink: #197bbd;
 // - Accent
@@ -97,7 +97,7 @@ $nbLogoHeight: 32px;
 //
 //- Sidebar
 $sidebarWidth: 300px;
-$ssb-dataName: 'ssbplugin';
+$ssb-dataName: 'sb-right';
 $ssb-wrapper: '[data-' + $ssb-dataName + '="sub-wrapper"]';
 
 //

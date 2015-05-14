@@ -1,0 +1,52 @@
+/*SIDEBAR*/
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+	@include fontSize(12pt);
+	
+	h3 {
+		padding-top: 1em;
+		margin: 0;
+		@include fontSize(14pt);
+	}
+	
+	#{$links} {
+		@include fontSize(inherit);
+	}
+}
+
+.sidebar-right {
+	right: $sidebarWidth;
+	@include boxShadow((-3px 0px 3px 0px rgba(0, 0, 0, 0.5)))
+}
+
+.sidebar-left {
+	left: $sidebarWidth;
+	@include boxShadow((3px 0px 3px 0px rgba(0, 0, 0, 0.5)))
+}
+
+[data-#{$ssb-dataName}="disabled"] {
+	@include boxShadow((0px 0px 0px 0px rgba(0, 0, 0, 0)))
+}
+
+.sidebar-header {
+	padding: 1em;
+}
+
+.logo-sidebar {
+	width: 64px;
+	height: 64px;
+}
+
+.nav-sidebar {
+	ul {
+		li {
+		    height: 20pt;
+		    line-height: 20pt;
+			padding: 8pt 16pt;
+		}
+	}
+}

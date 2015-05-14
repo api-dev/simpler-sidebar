@@ -7,8 +7,8 @@
     
     <title>Simpler Sidebar</title>
     
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -18,13 +18,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </head>
 
-<body data-ng-app="dcdeiv">
+<body>
 
     <div class="main container main-fixed-top">
 		
 		<header class="main-header">
 		    <h1>Simpler Sidebar</h1>
-		    <h3>A simple sidebar written in jQuer</h3>
+		    <h3>A simple sidebar written in jQuery</h3>
 		    
 		    <div class="support">
 		        <div id="flattr-button" class="support-btn">
@@ -41,13 +41,37 @@
 		    </div>
 		</header>
 		
-
-	
+		<div class="section">
+		    <p>Simpler Sidebar is the second generation of <a href="http://github.com/dcdeiv/simple-sidebar">Simple Sidebar</a>.</p>
+		    <h3>simple-sidebar vs. simpler-sidebar</h3>
+		    <ol>
+		        <li>Stop supporting subwrapper;</li>
+		        <li>Animating only the sidebar and not the entire page.</li>
+	        </ol>
+	        
+	        <h3>Why this changes?</h3>
+	        <ol>
+	            <li>You should know how to let the sidebar content overflow, so to shrink the code I decided to get rid of this feature;</li>
+	            <li>Animating the entire content was often an issue, position: fixed and position: absolute elements didn't animate the way they should, so I decided to only animate the sidebar as it happens on Android.</li>
+            </ol>
+		</div>
+		
+	    <h3>Demos</h3>
+	    
+	    <nav>
+	        <ul>
+	            <li><a href="right">Right</a></li>
+	            <li><a href="right-top">Right-Top</a></li>
+	            <li><a href="left">Left</a></li>
+	            <li><a href="left-top">Left-Top</a></li>
+	        </ul>
+	    </nav>
+		
 	<!--NAVBAR-->
     <div id="main-navbar" class="main-navbar navbar-fixed-top">
         <div class="container">
             <div class="logo logo-picture logo-navbar left rounded">
-                <a href="index.html">
+                <a href="http://davidedc.altervista.org">
                     <img src="http://graph.facebook.com/dcdeiv/picture?type=large" alt="dcdeiv" width="32px" height="32px">
                 </a>
             </div>
@@ -61,7 +85,7 @@
                             <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="index.html#github">Github</a>
+                            <a href="http://github.com/dcdeiv/simpler-sidebar" target="_blank">Github</a>
                         </li>
                     </ul>
                 </nav>
@@ -72,6 +96,15 @@
     
     <!--SIDEBAR-->
     <div id="sidebar" class="theme-accent sidebar sidebar-right">
+        <header class="sidebar-header">
+            <div class="logo logo-picture logo-sidebar">
+                <a href="http://davidedc.altervista.org">
+                    <img class="rounded" src="http://graph.facebook.com/dcdeiv/picture?type=large" alt="dcdeiv" width="64px" height="64px">
+                </a>
+            </div>
+            <h3>Simpler Sidebar</h3>
+        </header>
+        
         <div class="nav nav-sidebar">
 			<nav>
 				<ul>
@@ -83,7 +116,7 @@
     </div>
     <!--SIDEBAR-->
 
-<script src="jquery.simplersidebar.js"></script>
+<script src="jquery.simplersidebar.min.js"></script>
 <script>
 $( document ).ready(function() {
     $( '#sidebar' ).simplerSidebar({

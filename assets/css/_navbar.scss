@@ -26,21 +26,17 @@
 }
 
 .logo-navbar {
-    line-height: $navbarHeight;
-}
-
-.logo-text {
-    font-family: $nbLogoTextFont;
-    font-size: $nbLogoTextSize;
-}
-
-.logo-picture {
     line-height: 0;
     padding-top: ($navbarHeight - $nbLogoHeight) / 2;
     
     img {
         height: $nbLogoHeight;
     }
+}
+
+.logo-text {
+    font-family: $nbLogoTextFont;
+    font-size: $nbLogoTextSize;
 }
 
 .navbar-content {
