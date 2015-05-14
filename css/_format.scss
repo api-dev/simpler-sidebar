@@ -1,0 +1,155 @@
+// FORMAT
+
+body, html {
+  background-color: $primaryColor;
+  font-family: $primaryFont;
+  @include fontSize($pTextSize);
+  color: $primaryText;
+  font-weight: $pTextWeight;
+}
+
+a {
+  color: $primaryLink;
+  @include fontSize($pLinkSize);
+  text-decoration: none;
+  font-weight: $pLinkWeight;
+  
+  &:link, &:visited {
+    color: $primaryLink;
+  }
+  &:hover {
+    color: $pLinkHover;
+  }
+  &:active {
+    color: $pLinkActive;
+  }
+}
+  
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400; }
+
+h1 {
+  @include fontSize(34pt)
+}
+h2 {
+  @include fontSize(24pt)
+}
+h3 {
+  @include fontSize(20pt)
+}
+h4 {
+  @include fontSize(16pt)
+}
+h5 {
+  @include fontSize(14pt)
+}
+h6 {
+  @include fontSize(12pt)
+}
+
+b, strong {
+  font-weight: $pTextBold;
+}
+
+blockquote {
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-left: .5em;
+  border-left: 3px solid;
+  
+  p {
+    margin-bottom: .5em;
+  }
+  
+  cite:before {
+    content: "\2014";
+  }
+}
+
+dfn {
+  font-weight: 500;
+}
+
+mark {
+  background-color: $pMarkColor;
+  padding: 0 .3em;
+}
+
+dt {
+  font-weight: 500;
+}
+dd {
+  margin: 0;
+  
+  &:before {
+    content: "\2014";
+  }
+}
+
+small {
+  @include fontSize(($pTextSize * .85));
+}
+big {
+  @include fontSize(($pTextSize * 1,25));
+}
+
+code, samp, pre, kbd {
+  font-family: 'courier new', courier, monospase;
+  @include fontSize(12pt);
+  line-height: 1;
+}
+
+code, pre {
+  background-color: $accentColor;
+  color: $accentText;
+  padding: .1em .3em;
+  margin-left: .5em;
+  margin-right: .5em;
+  @include borderRadius(.2em);
+}
+
+img, figure {
+    margin: 0;
+    padding: 0;
+  max-width: 100%;
+  height: auto;
+  line-height: 0;
+}
+
+pre {
+  padding: .5em;
+  
+  code {
+    background-color: transparent;
+    color: iherit;
+    margin: 0;
+    padding: 0;
+    @include borderRadius(0);;
+  }
+}
+
+kbd {
+  background-color: #616161;
+  color: #fafafa;
+  padding: 0 .5em;
+  @include borderRadius(.2em);
+
+  kbd {
+    font-weight: 600;
+    padding: 0 0.2em;
+  }
+}
+
+nav {
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    @include fontSize(14pt);
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+}

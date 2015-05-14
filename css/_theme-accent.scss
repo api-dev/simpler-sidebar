@@ -1,0 +1,19 @@
+// THEME ACCENT
+
+.theme-accent {
+    background-color: $accentColor;
+    color: $accentText;
+    
+    a {
+        color: $accentLink !important;
+        
+        &:hover {
+            color: $aLinkHover;
+        }
+        
+        &:active {
+            color: $aLinkActive;
+        }
+        
+    }
+}
