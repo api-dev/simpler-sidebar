@@ -7,10 +7,10 @@
     width: 300px;
 	@include fontSize(12pt);
 	
-	h3 {
-		padding-top: 1em;
-		margin: 0;
+	h1, h2, h3, h4, h5, h6 {
 		@include fontSize(14pt);
+		margin: 8pt 0 3pt 0 !important;
+		padding: 0 !important;
 	}
 	
 	#{$links} {
@@ -49,4 +49,9 @@
 			padding: 8pt 16pt;
 		}
 	}
+}
+
+.nav-title {
+	font-weight: 400;
+	margin: 8pt -5pt -5pt -5pt !important;
 }
