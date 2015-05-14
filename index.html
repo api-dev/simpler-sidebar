@@ -28,7 +28,7 @@
 		    
 		    <div class="support">
 		        <div id="flattr-button" class="support-btn">
-		            <a href="https://flattr.com/submit/auto?user_id=dcdeiv&url=http%3A%2F%2Fdavidedc.altervista.org" target="_blank"><img src="http://button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+		            <script id='fbcu3fg'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=dcdeiv&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbcu3fg');</script>
 		        </div>
 		        <div id="donate-button" class="support-btn">
 		            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -64,6 +64,147 @@
 	            <li><a href="left-top">Left-Top</a></li>
 	        </ul>
 	    </nav>
+	    
+	    <h3>SET-UP</h3>
+	    
+	    <h4>1) Create your sidebar:</h4>
+<pre>
+&lt;div class="sidebar" id="sidebar"&gt;
+&lt;/div&gt;
+</pre>
+        
+        <h5>1.2) TIP: To let the content of your sidebar overflow (especially when you have a lot of content in it), you have to add a <code>wrapper</code> that wraps all content.</h5>
+
+<pre>
+&lt;divdiv class="sidebar" id="sidebar"&gt;
+    &lt;div class="sidebar-wrapper" id="sidebar-wrapper"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+        <p>And give it these css attributes:</p>
+
+<pre>
+.sidebar {
+    position: relative;
+    height: 100%;
+    overflow: auto
+}
+</pre>
+        
+        <h4>2) Create your navigation bar. I suggest to position this navbar fixed to the top of the page so that it can be alway reachable.</h4>
+        
+<pre>
+&lt;div class="navbar" id="navbar"&gt;
+&lt;/div&gt;
+</pre>
+        
+        <h4>3) Include a button to trigger the animation. This button must be alinged to left or right according to the sidebar align:</h4>
+
+<pre>
+&lt;div class="navbar" id="navbar"&gt;
+    &lt;span id="open-sidebar" class="button menu icon icon-hamburger"&gt;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+        <h4>4) Include the plugin just after the jQuery library, use the minified version for lighten up the code:</h4>
+
+<pre>
+&lt;script src="jquery.simplesidebarv2.min.js"&gt;&lt;/script&gt;
+</pre>
+
+        <h4>5) See <i>Options</i> for the last step.</h4>
+        
+        <h3>OPTIONS</h3>
+        
+        <p>Here is an example of usage with all the available options. Pay attention, these options are similar but not the same as <a href="http://www.github.com/dcdeiv/simple-sidebar" target="_blank">simple-sidebar</a>'s options:</p>
+
+<pre>
+$( '#sidebar' ).simplerSidebar({
+    opener: undefined,
+    dataName: 'ssbv2',
+    top: 0,
+    animation: {
+        duration: 500,
+        easing: 'swing'
+    },
+    sidebar: {
+        align: undefined,
+        width: 350,
+        gap: 64,
+        closingLinks: 'a',
+        css: {
+            zIndex: 3000
+        }
+    },
+    mask: {
+        css: {
+            backgroundColor: 'black',
+            opacity: 0.5,
+            filter: 'Alpha(opacity=50)'
+        }
+    }
+});
+</pre>
+        
+        <h4>Full list</h4>
+        <dl>
+            <dt>opener</dt>
+            <dd>is the selector for the button/icon that will trigger the animation;</dd>
+            
+            <dt>dataName</dt>
+            <dd>is the <code>data-*</code> attribute to make the plugin works. If <code>ssbv2</code> is somehow causing you issues, you can change it;</dd>
+            <dt>top</dt>
+            <dd>is the <code>position-top</code> of the entire plugin. You can choose whatever number you want (better if you choose it according to the navbar's height) or let it to be 0;</dd>
+            
+            <dt>animation</dt>
+                
+                <dl>
+                    <dt>duration</dt>
+                    <dd>the duration of the animation in milliseconds;</dd>
+                    
+                    <dt>easing</dt>
+                    <dd>the type of animation. For more animations include the <i>jQuery-UI</i> library and check out <a href="https://jqueryui.com/easing/" target="_blank">this page</a>. I strongly suggest not to play with easing because they haven't been tested all yet. I suggest to use simple easing like <code>easeOutQuit</code>;</dd>
+                    
+                </dl>
+            
+            <dt>sidebar</dt>
+                
+                <dl>
+                    <dt>align</dt>
+                    <dd>default is <code>undefined</code> which means that is aligned to the <b>right</b>, if you want to align it to the left, wright <b>left</b>;</dd>
+                    
+                    <dt>width</dt>
+                    <dd>the max width of the sidebar, this option is default to 350, please change it as you please;</dd>
+                    
+                    <dt>gap</dt>
+                    <dd>the gap is the space between the left margin of the sidebar and the left side of the window. It is useful when you position the plugin <code>top: 0</code>, so that the user can click that space to close the sidebar;</dd>
+                    
+                    <dt>closingLinks</dt>
+                    <dd>are all links or elements that close the sidebar. I suggest to choose a class and give it to all links and other elements such as icons, banner, images, etc, that are links. By default it is <code>a</code> so every link in the sidebar will close the sidebar;</dd>
+                    
+                    <dt>css</dt>
+                    <dd>here you can store all css, anyway I suggest not to add more css attributes to the one below;</dd>
+                    
+                    <dt>zIndex</dt>
+                    <dd>by default is is 3000 but you have to change it to the higher z-index number in your css plus 1;</dd>
+                </dl>
+                    
+            <dt>mask</dt>
+                <dl>
+                    <dt>css</dt>
+                    <dd>here you can store all css attributes to give the mask div. However I suggest to do it in your css file except for these below. You can call this div by its data attribute ex: <code>[data-ssbv2="mask"]</code>;</dd>
+                    
+                    <dt>backgroundColor</dt>
+                    <dd>the color of the mask. By default is <code>'black'</code>;</dd>
+                    
+                    <dt>opacity</dt>
+                    <dd>by default is 0.5;</dd>
+                    
+                    <dt>filter</dt>
+                    <dd>IE opacity 0.5 = 50 and so on: <code>'Alpha(opacity=50)'</code>.</dd>
+                </dl>
+        </dl>
     </div>
 		
 	<!--NAVBAR-->
@@ -108,7 +249,7 @@
 			<nav>
 				<ul>
 					<li><a class="close-sb" href="index.html">Home</a></li>
-					<li><a class="close-sb" href="#github">Github</a></li>
+					<li><a class="close-sb" href="http://github.com/dcdeiv/simpler-sidebar" target="_blank">Github</a></li>
 				</ul>
 			</nav>
 			

@@ -48,7 +48,7 @@ h6 {
 }
 
 b, strong {
-  font-weight: $pTextBold;
+  font-weight: $pTextWeight + 200;
 }
 
 blockquote {
@@ -70,16 +70,29 @@ dfn {
   font-weight: 500;
 }
 
+i {
+  font-weight: inherit;
+  font-style: italic;
+}
+
 mark {
   background-color: $pMarkColor;
   padding: 0 .3em;
 }
 
+dl {
+  dl {
+     margin-left: 14pt;
+  }
+}
+
 dt {
   font-weight: 500;
+  margin-top:5pt;
 }
 dd {
   margin: 0;
+  margin-bottom: 10pt !important;
   
   &:before {
     content: "\2014";
