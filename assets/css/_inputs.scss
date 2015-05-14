@@ -1,56 +1,26 @@
 // FORM BUTTON INPUT and TEXTAREA
 button, input, select {
   font-weight: 400 !important;
-  @include fontSize((($pTextSize * .85) !important));
+  @include fontSize((($textSize * .85) !important));
 }
 
 button, input[type=button], input[type=submit], input[type=reset], select {
-  background-color: $btnColor;
-  color: $btnText;
   border: $btnBorderSize !important;
-  border-color: $btnBorderColor;
   margin-top: 24px !important;
   margin: 16px;
   height: 36px;
   text-transform: uppercase;
   padding: 0 1em;
   @include borderRadius(2px);
-  
-  &:hover {
-    background-color: $btnColorHover;
-    color: $btnTextHover;
-    border-color: $btnBorderColorHover;
-  }
-  &:active, &:focus {
-    background-color: $btnColorActFocus;
-    color: $btnTextActFocus;
-    border-color: $btnBorderColorActFocus;
-  }
 }
 
 input[type=text], input[type=email], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=time], input[type=url], input[type=week], textarea {
-  background-color: $inpColor;
-  color: $inpText;
   font-weight: 300;
   margin: 8px 0 16px 0;
   padding: 4px 2px;
   border: $inpBorderSize;
   border-style: $inpBorderStyle;
-  border-color: $inpBorderColor;
   text-decoration: none !important;
-  
-  &:hover {
-    background-color: $inpColorHover;
-    color: $inpTextHover;
-    text-decoration: none !important;
-    border-color: $inpBorderColorHover;
-  }
-  &:active, &:focus {
-    background-color: $inpColorActFocus;
-    color: $inpTextActFocus;
-    text-decoration: none !important;
-    border-color: $inpBorderColorActFocus;
-  }
 }
 
 input[type=date] {

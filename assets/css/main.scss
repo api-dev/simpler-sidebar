@@ -1,49 +1,17 @@
-@import 'variables';
-
-@import 'web-fonts';
-@include web-fonts(("Roboto": ("300", "400", "500", "700")), "Cookie");
-
-$path2fonts: '../fonts/';
-$glyph-name: 'glyphicons-halflings-regular';
-@import 'glyphicons';
-@include bootstrap-glyphicons($path2fonts, $glyph-name);
-
-@mixin fontSize($size) {
-  font-size: $size;
-  -ms-text-size-adjust: $size;
-  -webkit-text-size-adjust: $size;
-}
-
-@mixin borderRadius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	border-radius: $radius;
-}
-
-@mixin boxShadow($shadow) {
-	-webkit-box-shadow: $shadow;
-	-mox-box-shadow: $shadow;
-	box-shadow: $shadow;
-}
+//MAIN SCSS FILE
+@import 'mixins';
+@import 'var_format';
 
 @import 'format';
-
 @import 'inputs';
 
 /*
 ** template
 */
-@import 'template';
+@import 'classes';
 @import 'navbar';
 @import 'sidebar';
-@import 'supportbtn';
-
-
-/*
-** Themes
-*/
-@import 'theme-accent';
+@import 'pages/supportbtn';
 
 /*
 ** mobile
@@ -64,11 +32,3 @@ $glyph-name: 'glyphicons-halflings-regular';
 		display: none;
 	}
 }
-	
-	
-	
-	
-	
-	
-	
-	

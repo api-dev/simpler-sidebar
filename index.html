@@ -25,12 +25,16 @@
     
     <title>Simpler Sidebar</title>
     
-    <link rel="stylesheet" type="text/css" href="assets/css/min/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/min/main.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/standalones/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/standalones/glyphicons.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/standalones/roboto.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/themes/blue.min.css">
     
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
+    
 </head>
 
 <body>
@@ -41,7 +45,7 @@
 		    <h1>Simpler Sidebar</h1>
 		    <h3>A simple sidebar written in jQuery</h3>
 		    
-		    <div class="support">
+		    <div id="support" class="theme-accent">
 		        <div id="flattr-button" class="support-btn">
 		            <script id='fbcu3fg'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=dcdeiv&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbcu3fg');</script>
 		        </div>
@@ -137,7 +141,7 @@
 <pre>
 $( '#sidebar' ).simplerSidebar({
     opener: undefined,
-    dataName: 'ssbv2',
+    dataName: 'simplersidebar',
     top: 0,
     animation: {
         duration: 500,
@@ -290,7 +294,7 @@ $( '#sidebar' ).simplerSidebar({
 $( document ).ready(function() {
     $( '#sidebar' ).simplerSidebar({
         opener: '#toggle-sidebar',
-        dataName: 'sb-right',
+        dataName: 'simplersidebar',
         animation: {
             easing: 'easeOutQuint'
         },

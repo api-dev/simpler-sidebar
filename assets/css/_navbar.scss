@@ -2,8 +2,6 @@
 .main-navbar {
     position: relative;
     height: $navbarHeight;
-    background-color: $navbarColor;
-    color: $navbarText;
     font-size: $nbTextSize;
     font-weight: $nbTextWeight;
     
@@ -65,13 +63,4 @@
 #toggle-sidebar {
     cursor: pointer;
     font-size: $nbLogoTextSize;
-    color: $primaryLink;
-    
-    &:hover {
-        color: $pLinkHover;
-    }
-    
-    &:active {
-        color: $pLinkActive;
-    }
 }

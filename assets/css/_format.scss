@@ -1,28 +1,15 @@
 // FORMAT
 
 body, html {
-  background-color: $primaryColor;
   font-family: $primaryFont;
-  @include fontSize($pTextSize);
-  color: $primaryText;
-  font-weight: $pTextWeight;
+  @include fontSize($textSize);
+  font-weight: $textWeight;
 }
 
 a {
-  color: $primaryLink;
-  @include fontSize($pLinkSize);
+  @include fontSize($linkSize);
   text-decoration: none;
-  font-weight: $pLinkWeight;
-  
-  &:link, &:visited {
-    color: $primaryLink;
-  }
-  &:hover {
-    color: $pLinkHover;
-  }
-  &:active {
-    color: $pLinkActive;
-  }
+  font-weight: $linkWeight;
 }
   
 h1, h2, h3, h4, h5, h6 {
@@ -47,8 +34,8 @@ h6 {
   @include fontSize(12pt)
 }
 
-b, strong {
-  font-weight: $pTextWeight + 200;
+b, strong, dfn {
+  font-weight: $textWeight + 200;
 }
 
 blockquote {
@@ -66,17 +53,12 @@ blockquote {
   }
 }
 
-dfn {
-  font-weight: 500;
-}
-
 i {
   font-weight: inherit;
   font-style: italic;
 }
 
 mark {
-  background-color: $pMarkColor;
   padding: 0 .3em;
 }
 
@@ -95,38 +77,36 @@ dd {
   margin-bottom: 10pt !important;
   
   &:before {
-    content: "\2014";
+  content: "\2014";
   }
 }
 
 small {
-  @include fontSize(($pTextSize * .85));
+    @include fontSize(($textSize * .85));
 }
 big {
-  @include fontSize(($pTextSize * 1,25));
+    @include fontSize(($textSize * 1,25));
 }
 
 code, samp, pre, kbd {
-  font-family: 'courier new', courier, monospase;
-  @include fontSize(12pt);
-  line-height: 1;
+    font-family: 'courier new', courier, monospase;
+    @include fontSize(12pt);
+    line-height: 1;
 }
 
 code, pre {
-  background-color: $accentColor;
-  color: $accentText;
-  padding: .1em .3em;
-  margin-left: .5em;
-  margin-right: .5em;
-  @include borderRadius(.2em);
+    padding: .1em .3em;
+    margin-left: .5em;
+    margin-right: .5em;
+    @include borderRadius(.2em);
 }
 
 img, figure {
     margin: 0;
     padding: 0;
-  max-width: 100%;
-  height: auto;
-  line-height: 0;
+    max-width: 100%;
+    height: auto;
+    line-height: 0;
 }
 
 pre {
@@ -142,8 +122,6 @@ pre {
 }
 
 kbd {
-  background-color: #616161;
-  color: #fafafa;
   padding: 0 .5em;
   @include borderRadius(.2em);
 
