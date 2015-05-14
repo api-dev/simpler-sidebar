@@ -1,0 +1,110 @@
+// THEME-RED
+
+//
+// ** PALETTE **
+//
+// - Primary
+$primaryColor: #fff;
+$primaryText: #2e2e2e;
+$primaryLink: #ff7043;
+// - Accent
+$accentColor: #ff5722;
+$accentText: #fff;
+$accentLink: #fbe9e7;
+
+//
+// ** TYPOGRAPHY **
+//
+//- Font
+$path2fonts: 'http://davidedc.altervista.org/assets/fonts/';
+$glyph-name: 'glyphicons-halflings-regular';
+$Roboto: 'Roboto', sans-serif;
+$Cookie: 'Cookie', cursive;
+
+$primaryFont: $Roboto;
+$pTextWeight: 300;
+$pTextSize: 14pt;
+
+$pTextBold : $pTextWeight + 200;
+
+//
+// - Link
+$pLinkSize: inherit;
+$pLinkWeight: $pTextWeight + 100;
+//
+// - Link Primary
+$pLinkHover: darken($primaryLink, 30);
+$pLinkActive: darken($primaryLink, 40);
+//
+// Link Accent
+$aLinkHover: darken($accentLink, 10);
+$aLinkActive: darken($accentLink, 20);
+
+
+//
+// - Mark
+$pMarkColor: $accentColor;
+
+
+
+//
+// ** INPUTS **
+//
+// - Button - Input[type=button,submit,reset] - Select
+$btnColor: $primaryLink;
+$btnText: $accentText;
+$btnBorderSize: 0;
+$btnBorderColor: transparent;
+    // - hover
+    $btnColorHover: darken($btnColor, 10);
+    $btnTextHover: $accentText;
+    $btnBorderColorHover: transparent;
+    // - active/focus
+    $btnColorActFocus: darken($btnColor, 20);
+    $btnTextActFocus: $accentText;
+    $btnBorderColorActFocus: transparent;
+//
+// - Other Inputs and Textarea
+$inpColor: inherit;
+$inpText: inherit;
+$inpBorderSize: 0 0 1px 0;
+$inpBorderStyle: solid;
+$inpBorderColor: inherit;
+    // - hover
+    $inpColorHover: inherit;
+    $inpTextHover: inherit;
+    $inpBorderColorHover: darken($primaryLink, 10) !important;
+    // - active/focus
+    $inpColorActFocus: inherit;
+    $inpTextActFocus: inherit;
+    $inpBorderColorActFocus: darken($primaryLink, 20) !important;
+    
+
+
+//
+// ** TEMPLATE **
+//
+//- Navbar
+$navbarHeight: 60px;
+$navbarColor: inherit;
+$navbarText: $primaryText;
+$nbTextSize: 11pt;
+$nbTextWeight: 400;
+$nbLogoTextSize: 18pt;
+$nbLogoTextFont: $Cookie;
+$nbLogoHeight: 32px;
+
+//
+//- Sidebar
+$sidebarWidth: 300px;
+$ssb-dataName: 'sb-right';
+$ssb-wrapper: '[data-' + $ssb-dataName + '="sub-wrapper"]';
+
+//
+//- Mixins
+$links: 'a, a:link, a:visited, a:hover, a:active';
+
+//
+//- Media Queries
+$mobileQuery: 640px;
+

@@ -1,11 +1,11 @@
-@import 'variables';
+@import 'var-orange';
 
-@import 'web-fonts';
+@import '../web-fonts';
 @include web-fonts(("Roboto": ("300", "400", "500", "700")), "Cookie");
 
 $path2fonts: '../fonts/';
 $glyph-name: 'glyphicons-halflings-regular';
-@import 'glyphicons';
+@import '../glyphicons';
 @include bootstrap-glyphicons($path2fonts, $glyph-name);
 
 @mixin fontSize($size) {
@@ -27,23 +27,23 @@ $glyph-name: 'glyphicons-halflings-regular';
 	box-shadow: $shadow;
 }
 
-@import 'format';
+@import '../format';
 
-@import 'inputs';
+@import '../inputs';
 
 /*
 ** template
 */
-@import 'template';
-@import 'navbar';
-@import 'sidebar';
-@import 'supportbtn';
+@import '../template';
+@import '../navbar';
+@import '../sidebar';
+@import '../supportbtn';
 
 
 /*
 ** Themes
 */
-@import 'theme-accent';
+@import '../theme-accent';
 
 /*
 ** mobile
