@@ -19,12 +19,12 @@
 }
 
 .sidebar-right {
-	right: $sidebarWidth;
+	right: -$sidebarWidth;
 	@include boxShadow((-3px 0px 3px 0px rgba(0, 0, 0, 0.5)))
 }
 
 .sidebar-left {
-	left: $sidebarWidth;
+	left: -$sidebarWidth;
 	@include boxShadow((3px 0px 3px 0px rgba(0, 0, 0, 0.5)))
 }
 
