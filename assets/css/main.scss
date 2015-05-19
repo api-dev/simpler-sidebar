@@ -11,24 +11,3 @@
 @import 'classes';
 @import 'navbar';
 @import 'sidebar';
-//@import 'pages/supportbtn';
-
-/*
-** mobile
-*/
-
-.mobile-show {
-	display: none;
-}
-.mobile-hide {
-	display: block;
-}
-
-@media all and (max-width: $mobileQuery) {
-	.mobile-show {
-		display: block;
-	}
-	.mobile-hide {
-		display: none;
-	}
-}

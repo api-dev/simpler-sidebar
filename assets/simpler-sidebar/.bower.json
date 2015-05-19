@@ -1,27 +1,21 @@
 {
   "name": "simpler-sidebar",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "homepage": "https://github.com/dcdeiv/simpler-sidebar",
   "authors": [
     "dcdeiv <davide.dicriscito@gmail.com>"
   ],
-  "description": "A simple jQuery plugin that animates a left or a right sidebar",
+  "description": "A simple jQuery sidebar",
   "main": "jquery.simplersidebar.min.js",
   "keywords": [
     "jQuery",
     "Simpler",
     "Sidebar",
-    "Simple",
-    "Sidebar",
-    "Simple",
-    "Sidebar",
     "javascript",
+    "js",
     "left",
     "right",
-    "right",
-    "sidebar",
-    "left",
-    "sidebar"
+    "plugin"
   ],
   "license": "GPLv2",
   "ignore": [
@@ -30,15 +24,18 @@
     "bower_components",
     "bower",
     "test",
-    "tests"
+    "tests",
+    "src",
+    "Gruntfile.js"
   ],
-  "_release": "1.1.1",
+  "_release": "1.2.0",
   "_resolution": {
     "type": "version",
-    "tag": "v1.1.1",
-    "commit": "d9b33d8864e470c220f63c564a373efcd234a5a3"
+    "tag": "v1.2.0",
+    "commit": "5f4c40de73e5ecd4fb80436894040cce386479cc"
   },
   "_source": "git://github.com/dcdeiv/simpler-sidebar.git",
-  "_target": "~1.1.0",
-  "_originalSource": "simpler-sidebar"
+  "_target": "~1.2.0",
+  "_originalSource": "simpler-sidebar",
+  "_direct": true
 }
