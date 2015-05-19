@@ -1,0 +1,41 @@
+<h2>Set-Up tips:</h2>
+
+<p>This version is simpler than the first one because you won't need to do much more than this:</p>
+
+<h3>1) Create your sidebar:</h3>
+    
+<pre>&lt;div class=&quot;sidebar&quot; id=&quot;sidebar&quot;&gt;
+&lt;/div&gt;</pre>
+
+<h3>2) TIP: To let the content of your sidebar overflow (especially when you have a lot of content in it), you have to add a <code>wrapper</code> that wraps all content.</h3>
+
+<pre>&lt;div class=&quot;sidebar&quot; id=&quot;sidebar&quot;&gt;
+  &lt;div class=&quot;sidebar-wrapper&quot; id=&quot;sidebar-wrapper&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+<p>And give it these css attributes:</p>
+
+<pre>.sidebar-wrapper {
+  position: relative;
+  height: 100%;
+  overflow: auto
+ }</pre>
+ 
+ 
+ <h3>3) Create your navigation bar. I suggest to position this navbar fixed to the top of the page so that it can be alway reachable.</h3>
+
+<pre>&lt;div class=&quot;navbar&quot; id=&quot;navbar&quot;&gt;
+&lt;/div&gt;</pre>
+
+<h3>4) Include a button to trigger the animation. This button must be alinged to left or right according to the sidebar align (see <a href="#options">options</a>:</h3>
+
+<pre>&lt;div class=&quot;navbar&quot; id=&quot;navbar&quot;&gt;
+  &lt;span id=&quot;open-sidebar&quot; class=&quot;button menu icon icon-hamburger&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</pre>
+
+<h3>5) Include the plugin just after the jQuery library, use the minified version for lighten up the code:</h3>
+
+<pre>&lt;script src=&quot;simpler-sidebar/simpler-sidebar.min.js&quot;&gt;&lt;/script&gt;</pre>
+
+<h3>6) See <a href="#options">Options</a> for the last step.</h3>
