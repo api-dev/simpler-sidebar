@@ -1,6 +1,6 @@
 {
   "name": "simpler-sidebar",
-  "version": "1.2.0",
+  "version": "1.2.3",
   "homepage": "https://github.com/dcdeiv/simpler-sidebar",
   "authors": [
     "dcdeiv <davide.dicriscito@gmail.com>"
@@ -28,14 +28,16 @@
     "src",
     "Gruntfile.js"
   ],
-  "_release": "1.2.0",
+  "dependencies": {
+    "jquery": ">= 1.11.2"
+  },
+  "_release": "1.2.3",
   "_resolution": {
     "type": "version",
-    "tag": "v1.2.0",
-    "commit": "5f4c40de73e5ecd4fb80436894040cce386479cc"
+    "tag": "v1.2.3",
+    "commit": "6dc0505250025990ad3d9a4b62e2bb5c8df2e9c0"
   },
   "_source": "git://github.com/dcdeiv/simpler-sidebar.git",
   "_target": "~1.2.0",
-  "_originalSource": "simpler-sidebar",
-  "_direct": true
+  "_originalSource": "simpler-sidebar"
 }

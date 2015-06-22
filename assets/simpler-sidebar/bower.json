@@ -1,6 +1,6 @@
 {
   "name": "simpler-sidebar",
-  "version": "1.2.0",
+  "version": "1.2.3",
   "homepage": "https://github.com/dcdeiv/simpler-sidebar",
   "authors": [
     "dcdeiv <davide.dicriscito@gmail.com>"
@@ -27,5 +27,8 @@
     "tests",
     "src",
     "Gruntfile.js"
-  ]
+  ],
+  "dependencies": {
+    "jquery": ">= 1.11.2"
+  }
 }

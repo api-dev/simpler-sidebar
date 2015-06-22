@@ -1,6 +1,6 @@
 {
   "name": "simpler-sidebar",
-  "version": "1.2.0",
+  "version": "1.2.3",
   "description": "A simple jQuery sidebar",
   "main": "simpler-sidebar.js",
   "scripts": {
@@ -25,6 +25,9 @@
   "license": "GPLv2",
   "bugs": {
     "url": "https://github.com/dcdeiv/simpler-sidebar/issues"
+  },
+  "dependencies": {
+    "jquery": "^1.11.2"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
