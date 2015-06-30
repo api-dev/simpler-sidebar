@@ -1,0 +1,44 @@
+{
+  "name": "simpler-sidebar",
+  "version": "1.2.3",
+  "homepage": "https://github.com/dcdeiv/simpler-sidebar",
+  "authors": [
+    "dcdeiv <davide.dicriscito@gmail.com>"
+  ],
+  "description": "A simple jQuery sidebar",
+  "main": "jquery.simplersidebar.min.js",
+  "keywords": [
+    "jQuery",
+    "Simpler",
+    "Sidebar",
+    "javascript",
+    "js",
+    "left",
+    "right",
+    "plugin"
+  ],
+  "license": "GPLv2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower",
+    "test",
+    "tests",
+    "src",
+    "Gruntfile.js"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.11.2"
+  },
+  "_release": "1.2.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.3",
+    "commit": "6dc0505250025990ad3d9a4b62e2bb5c8df2e9c0"
+  },
+  "_source": "git://github.com/dcdeiv/simpler-sidebar.git",
+  "_target": "~1.2.3",
+  "_originalSource": "simpler-sidebar",
+  "_direct": true
+}
