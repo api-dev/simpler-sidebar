@@ -58,20 +58,22 @@
     		    <h2>Simple-Sidebar <b>vs</b> Simpler-Sidebar</h2>
 
     		    <ol>
-                    <li>Stop supporting <code>subwrapper</code>;</li>
-                    <li>Animating only the sidebar and not the entire page;</li>
+                    <li>Stop supporting <code>subwrapper</code>.</li>
+                    <li>Animating only the sidebar and not the entire page.</li>
                 </ol>
 
                 <h3>Why this changes?</h3>
                 <ol>
-                    <li>You should know how to let the sidebar content overflow (if not check out the <a href="#set-up-tips">set-up tips</a>) so to shrink the code I decided to get rid of this feature;</li>
-                    <li>Animating the entire content was often an issue, <code>position: fixed</code> and <code>position: absolute</code> elements didn't animate the way they should, so I decided to only animate the sidebar;</li>
+                    <li>You should know how to let the sidebar content overflow (if not check out [Getting Started](#Getting-Started)). To shrink the code, I decided to get rid of this feature.</li>
+                    <li>Animating the entire page was often an issue, <code>position: fixed</code> and <code>position: absolute</code> elements didn't animate the way they should, so I decided to only animate the sidebar.</li>
                 </ol>
             </div>
 
             <div id="setup" class="section"></div>
 
     	    <div id="options" class="section"></div>
+
+            <div id="releases" class="section"></div>
         </div>
 
         <div id="footer" class="footer theme-accent"></div>
@@ -101,6 +103,7 @@ $( document ).ready(function() {
 	$( '#download' ).load( 'http://dcdeiv.github.io/simpler-sidebar/download.html' );
     $( '#setup' ).load( 'http://dcdeiv.github.io/simpler-sidebar/setup.html' );
 	$( '#options' ).load( 'http://dcdeiv.github.io/simpler-sidebar/options.html' );
+    $( '#releases' ).load( 'http://dcdeiv.github.io/simpler-sidebar/releases.html' );
 
     $( '#main-navbar' ).load( 'http://dcdeiv.github.io/simpler-sidebar/navbar.html', function() {
         $( '#download-pkg' ).URLrelease( 'simpler-sidebar' );

@@ -1,90 +1,74 @@
-<h2 id="options">OPTIONS</h2>
+<h2>OPTIONS</h2>
 
-<p>Here is an example of usage with all the available options. Pay attention, these options are similar but not the same as <a href="https://www.github.com/dcdeiv/simple-sidebar" target="_blank">simple-sidebar</a>'s options:</p>
+<p>This is a full list of options.</p>
+<p>You can override the single option by using the plug-in API or directly in the function.</p>
 
-<pre>$( '#sidebar' ).simplerSidebar({
-    opener: undefined,
-    attr: 'simplersidebar',
-    top: 0,
-    animation: {
-        duration: 500,
-        easing: 'swing'
-    },
-    sidebar: {
-        align: undefined,
-        width: 350,
-        gap: 64,
-        closingLinks: 'a',
-        css: {
-            zIndex: 3000
-        }
-    },
-    mask: {
-        display: true,
-        css: {
-            backgroundColor: 'black',
-            opacity: 0.5,
-            filter: 'Alpha(opacity=50)'
-        }
-    }
-});</pre>
+<h3>How to use the public access to plug-in options:</h3>
 
-<h4>How to use the public access to plugin options:</h4>
+<p>The base API is <code>$.fn.simplerSidebar.settings</code>. Check <a href="#options-list">Options List</a> out to see the full list of APIs available.</p>
 
-<p>The base api is <code>$.fn.simplerSidebar.settings</code> see <a href="#option-list">option list</a> to the full list of apis available.</p>
+<pre>
+$.fn.simplerSidebar.opener = '#toggle-sidebar';
+$.fn.simplerSidebar.attr = 'simplersidebar';
+$.fn.simplerSidebar.top = 42;
+$.fn.simplerSidebar.animation.duration = 500;
+$.fn.simplerSidebar.animation.duration = 'easeOutQuint';
+$.fn.simplerSidebar.sidebar.align = 'left';
+$.fn.simplerSidebar.sidebar.width = 300;
+$.fn.simplerSidebar.sidebar.gap = 64;
+$.fn.simplerSidebar.sidebar.closingLinks = '.close-sidebar';
+$.fn.simplerSidebar.sidebar.css.zIndex = 3000;
+$.fn.simplerSidebar.mask.display = true;
+$.fn.simplerSidebar.mask.css.backgroundColor = 'black';
+$.fn.simplerSidebar.mask.css.opacity = 0.5;
+$.fn.simplerSidebar.mask.css.filter = 'Alpha(opacity=50)';
 
-<pre>$.fn.simplerSidebar.settings.top = 60,
-$.fn.simplerSidebar.settings.opener = '#the-button-selector';
-$.fn.simplerSidebar.settings.sidebar.align = 'right';
-$.fn.simplerSidebar.settings.sidebar.width = '300';
-$.fn.simplerSidebar.settings.sidebar.closingLinks = '.clode-sidebar';
-$.fn.simplerSidebar.settings.sidebar.css.zIndex = '3000';
-$.fn.simplerSidebar.settings.mask.display = 'false'
+$( '#sidebar' ).simplerSidebar();
+</pre>
 
-$( '#sidebar' ).simpleSidebar();</pre>
+<p>Overriding multiple options can be buggy, especially when you try to override `sidebar`, the plug-in will crash.</p>
 
-<p>If you want to override multiple options: This way can be buggy, especially when you try to override <code>sidebar</code>, the plugin will crash.</p>
+<pre>
+$.fn.simplerSidebar.settings.mask.css = {
+	//your style
+};
+</pre>
 
-<pre>$.fn.simplerSidebar.settings.mask.css = {
-    //your style
-};</pre>
-
-<h3 id="option-list">Option List</h3>
+<h3 id="options-list">Options List</h3>
 
 <ul>
-    <li><strong>opener</strong>: is the selector for the button/icon that will trigger the animation, see <a href="#setup">Set-Up tips #3</a>;</li>
-    <li><strong>attr</strong>: is the <code>data-*</code> attribute to make the plugin works. If <code>ssbv2</code> is somehow causing you issues, you can change it;
-    </li>
-    <li><strong>top</strong>: is the <code>position-top</code> of the entire plugin. You can choose whatever number you want (better if you choose it according to the navbar's height) or let it to be 0;</li>
-    <li><strong>animation</strong>
-        <ul>
-            <li><strong>duration</strong>: the duration of the animation in milliseconds;</li>
-            <li><strong>easing</strong>: the type of animation. For more animations include the <code>jQuery-UI</code> library and check out <a href="https://jqueryui.com/easing/" target="_blank">this page</a>. I strongly suggest not to play with easing because they haven't been tested all yet. I suggest to use simple easing like <code>easeOutQuint</code>;</li>
-        </ul>
-    </li>
-    <li><strong>sidebar</strong>
-        <ul>
-            <li><strong>align</strong>: default is <code>undefined</code> which means that is aligned to the <em>right</em>, if you want to align it to the left, wright <code>left</code>;</li>
-            <li><strong>width</strong>: the max width of the sidebar, this option is default to 350, please change it as you please;</li>
-            <li><strong>gap</strong>: the gap is the space between the left margin of the sidebar and the left side of the window. It is useful when you position the plugin <code>top: 0</code>, so that the user can click that space to close the sidebar;</li>
-            <li><strong>closingLinks</strong>: are all links or elements that close the sidebar. I suggest to choose a class and give it to all links and other elements such as icons, banner, images, etc, that are links. By default it is <code>a</code> so every link in the sidebar will close the sidebar;</li>
-            <li><strong>css</strong> here you can store all css, anyway I suggest not to add more css attributes to the one below;
-                <ul>
-                    <li><strong>zIndex</strong>: by default is is 3000 but you have to change it to the higher z-index number in your css plus 1;</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li><strong>mask</strong>
-        <ul>
-            <li><strong>display</strong>: <code>true</code> or <code>false</code> when false will remove this option;</li>
-            <li><strong>css</strong> here you can store all css attributes to give the mask div. However I suggest to do it in your css file except for these below. You can call this div by its data attribute ex: <code>[data-simplersidebar=&quot;mask&quot;]</code>;
-                <ul>
-                    <li><strong>backgroundColor</strong> the color of the mask. By default is <code>'black'</code>;</li>
-                    <li><strong>opacity</strong> by default is 0.5;</li>
-                    <li><strong>filter</strong> IE opacity 0.5 = 50 and so on: <code>'Alpha(opacity=50)'</code>.</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
+	<li><strong>opener</strong>: selector for the button/icon that will trigger the animation.</li>
+	<li><strong>attr</strong>: is the <code>data-*</code> attribute that makes the plug-in works. If <code>simplersidebar</code> is somehow causing you issues, you can change it.</li>
+	<li><strong>top</strong>: is the <code>position-top</code> of the entire plug-in. You can choose whatever number you want (better if you choose it according to the navbar&#39;s height) or let it be 0 by ignoring it.</li>
+	<li><strong>animation</strong>:
+	<ul>
+		<li><strong>duration</strong>: the duration of the animation in milliseconds.</li>
+		<li><strong>easing</strong>: the type of animation. For more animations include the <em>jQuery-UI</em> library and check out <a href="https://jqueryui.com/easing/">this page</a>. I strongly suggest not to play with easing because they haven&#39;t been tested all yet. I suggest to use simple easing like <code>easeOutQuint</code>.</li>
+	</ul>
+	</li>
+	<li><strong>sidebar</strong>:
+	<ul>
+		<li><strong>align</strong>: default is <code>undefined</code> which means that is aligned to <em>right</em>. If you want to align it to left, write <code>left</code>.</li>
+		<li><strong>width</strong>: the max width of the sidebar, this option is default to 300, please change it as you please.</li>
+		<li><strong>gap</strong>: the gap is the space between the left margin of the sidebar and the left side of the window (and viceversa). It is useful so that the user can click that space to close the sidebar.</li>
+		<li><strong>closingLinks</strong>: links or elements that close the sidebar. I suggest to choose a class and give it to all links and other elements such as icons, banner, images, etc, that are links or that are supposed to be clicked. By default it is <code>a</code> so every link in the sidebar will close the sidebar. It can be more then one.</li>
+		<li><strong>css</strong>: here you can store all css, anyway I suggest not to add more css attributes to the one below.
+		<ul>
+			<li><strong>zIndex</strong>: by default is is 3000 but you have to change it to the higher z-index number in your css plus 1.</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li><strong>mask</strong>:
+	<ul>
+		<li><strong>display</strong>: <code>true</code> or <code>false</code>. <code>false</code> will remove this option.</li>
+		<li><strong>css</strong>: here you can store all css attributes to give the mask div. However I suggest to do it in your css file except for these below. You can call this div by its data attribute for example: <code>[data-simplersidebar=&quot;mask&quot;]</code>.
+		<ul>
+			<li><strong>backgroundColor</strong>: the color of the mask. By default is <code>&#39;black&#39;</code>.</li>
+			<li><strong>opacity</strong>: by default is 0.5.</li>
+			<li><strong>filter</strong>: IE opacity 0.5 = 50 and so on: <code>&#39;Alpha(opacity=50)&#39;</code>.</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
 </ul>
