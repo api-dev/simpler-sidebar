@@ -1,0 +1,73 @@
+<h2>Getting Started</h2>
+
+<p>Download the <a href="https://github.com/dcdeiv/simpler-sidebar/releases/latest" target="_blank">latest version</a> of simple-sidebar.<br/>Simpler-Sidebar is also available via NPM and Bower:</p>
+
+<ul>
+  <li>bower install simpler-sidebar</li>
+  <li>npm install simpler-sidebar</li>
+</ul>
+
+<p>This fork is simpler than Simple-Sidebar because you won't need to do much more than this:</p>
+
+<pre>
+&lt;div id="navbar"&gt;
+  &lt;!--
+  #navbar is positioned fixed.
+
+  It does not matter what element #toggle-sidebar is, give it a selector (in this example #toggle-sidebar).
+  --&gt;
+  &lt;span id="toggle-sidebar" class="button icon"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div id="sidebar"&gt;
+  &lt;!--
+  Simpler-Sidebar will handle #sidebar's position.
+
+  To let the content of your sidebar overflow, especially when you have a lot of content in it, you have to add a "wrapper" that wraps all content.
+  --&gt;
+  &lt;div id="sidebar-wrapper" class="sidebar-wrapper"&gt;
+    &lt;!--
+    Links below are just an example. Give each clickable element, for example links, a class to trigger the closing animation.
+    -->
+    &lt;a class="close-sidebar" href="#"&gt;Link&lt;/a&gt;
+    &lt;a class="close-sidebar" href="#"&gt;Link&lt;/a&gt;
+    &lt;a class="close-sidebar" href="#"&gt;Link&lt;/a&gt;
+    &lt;a class="close-sidebar" href="#"&gt;Link&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>If you add the sidebar-wrapper (and you should), remember to give it this style attributes:</p>
+
+<pre>
+.sidebar-wrapper {
+  position: relative;
+  height: 100%;
+  overflow: auto;
+}
+</pre>
+
+<p>At the bottom of the web page, just before the <code>&lt;/body&gt;</code> tag, include the <b>jQuery</b> library. If you are interested in better easing, include the <b>jQuery-UI</b> library too. Eventually include Simpler-Sidebar.</p>
+
+<pre>
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"&gt;&lt;/script&gt;
+&lt;script src="simpler-sidebar/dist/jquery.simpler-sidebar.min.js"&gt;&lt;/script&gt;
+</pre>
+
+<p>Call the Simpler-Sidebar plugin function and fill it with the options you need. Here is an example of some required options.</p>
+
+<pre>
+&lt;script&gt;
+$(document).ready(function() {
+  $('#sidebar').simplerSidebar({
+    opener: '#toggle-sidebar',
+    sidebar: {
+      align: 'left', //or 'right' - This option can be ignored, the sidebar will automatically align to right.
+      width: 300, //You can ignore this option, the sidebar will automatically size itself to 300px.
+      closingLinks: '.close-sidebar' // If you ignore this option, the plugin will look for all links and this can be buggy. Choose a class for every object inside the sidebar that once clicked will close the sidebar.
+    }
+  });
+});
+&lt;/script&gt;
+</pre>

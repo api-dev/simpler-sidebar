@@ -1,128 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
 
-    <meta name="theme-color" content="#b71c1c">
-    <link rel="icon" sizes="192x192" type="image/png" href="assets/logo/192.png">
-    <link rel="shortcut icon" type="image/ico" href="../assets/logo/favicon.ico">
+  <meta name="theme-color" content="#F44336">
 
-    <meta name="keywords" content="simpler-sidebar, simpler sidebar, simple, simpler, sidebar, jquery, javascript, plugin, jquery plugin, dcdeiv, davidedc, sidebar left, sidebar right">
-    <meta name="description" content="A simple sidebar written in jQuery.">
-    <meta name="language" content="en">
-    <meta name="author" content="Davide Di Criscito, davide.dicriscito@gmail.com">
-    <meta name="owner" content="Davide Di Criscito">
-    <meta name="pagename" content="Simpler Sidebar - Left">
-    <meta name="coverage" content="Global">
-    <meta name="rating" content="General">
-    <meta name="subtitle" content="A simple sidebar written in jQuery.">
-    <meta name='target' content='all'>
-    <meta name='HandheldFriendly' content='True'>
-    <meta name="url" content="http://dcdeiv.github.io/simpler-sidebar/left">
-    <meta name="identifier-URL" content="http://dcdeiv.github.io/simpler-sidebar/left">
+  <meta name="keywords" content="simpler-sidebar, simpler sidebar, simple, simpler, sidebar, jquery, javascript, plugin, jquery plugin, dcdeiv, davidedc, sidebar left, sidebar right">
+  <meta name="description" content="A simple sidebar written in jQuery.">
+  <meta name="language" content="en">
+  <meta name="author" content="Davide Di Criscito, davide.dicriscito@gmail.com">
+  <meta name="owner" content="Davide Di Criscito">
+  <meta name="coverage" content="Global">
+  <meta name="rating" content="General">
+  <meta name='target' content='all'>
+  <meta name='HandheldFriendly' content='True'>
+  <meta name="url" content="http://dcdeiv.github.io/simpler-sidebar">
+  <meta name="identifier-URL" content="http://dcdeiv.github.io/simpler-sidebar">
 
-    <title>Simpler Sidebar - Left</title>
+  <title>Simpler Sidebar: Right</title>
 
-    <link rel="stylesheet" type="text/css" href="../lib/normalize.css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="../css/roboto.css">
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/themes/red.css">
+  <link rel="stylesheet" type="text/css" href="http://dcdeiv.github.io/simpler-sidebar/bower_components/normalize.css/normalize.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Roboto+Condensed:400,700,300|Roboto+Mono:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="http://cdn.materialdesignicons.com/1.1.70/css/materialdesignicons.min.css">
+  <link rel="stylesheet" type="text/css" href="http://dcdeiv.github.io/simpler-sidebar/css/main.css">
 
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <![endif]-->
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-min.css">
+  <!--<![endif]-->
 
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <![endif]-->
 </head>
 
 <body>
-
-    <div id="main" class="main main-fixed-top">
-        <div class="section-header">
-            <div class="container">
-                <header>
-                    <h1>Simpler-Sidebar</h1>
-                    <h3>demo left</h3>
-                </header>
-
-                <div id="support-section" class="support"></div>
-            </div>
-        </div>
-
-        <div class="container">
-
-            <div id="download" class="section"></div>
-
-            <div id="demo-setup" class="section">
-                <h3>Read the entire Set-Up guide <a href="../index.html">here</a></h3>
-
-        		<h4>How to install this sidebar:</h4>
- <pre>
- $( document ).ready(function() {
-    $( '#sidebar' ).simplerSidebar({
-        opener: '#toggle-sidebar',
-        attr: 'simplersidebar',
-        top: 64,
-        animation: {
-            easing: 'easeOutQuint'
-        },
-        sidebar: {
-            align: 'left',
-            width: 300,
-            closingLinks: '.close-sb',
-        }
-    });
-});
- </pre>
-            </div>
-        </div>
-
-        <div id="footer" class="footer theme-accent"></div>
+<div class="toolbar">
+  <div id="toolbar" class="toolbar-fixed pure-g"></div>
+  <div class="pure-g toolbar-header">
+    <div class="pure-u-1">
+      <h1>simpler-sidebar</h1>
+      <p>Left</p>
     </div>
-    <!--end of content-->
+    <div id="support" class="pure-u-1"></div>
+  </div>
+</div>
 
-    <!--navbar-->
-    <div id="main-navbar" class="main-navbar navbar-fixed-top navbar-flipped"></div>
-    <!--end navbar-->
+<div class="main">
+  <div id="guide" class="section">
+    <p>Press <i class="mdi mdi-menu"></i> to run simpler-sidebar</p>
+  </div>
 
-    <!--sidebar-->
-    <div id="sidebar" class="sidebar sidebar-left"></div>
-    <!--end sidebar-->
+  <div class="section">
+    <p>Read the entire set-up guide <a href="http://dcdeiv.github.io/simpler-sidebar/index.html#getting-started">here</a>.</p>
 
-<!-- plugins -->
+    <h2>simpler-sidebar Left options:</h2>
+
+<pre>
+$( document ).ready(function() {
+  $( '#sidebar' ).simplerSidebar({
+    top: 30,
+    opener: '#toggle-sidebar',
+    attr: 'simplersidebar',
+    animation: {
+      easing: 'easeOutQuint'
+    },
+    sidebar: {
+      align: 'left',
+      width: 300,
+      closingLinks: '.close-sb',
+    }
+  });
+});
+</pre>
+  </div>
+
+</div>
+
+<div id="sidenav" class="sidenav sidenav-right"></div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<script src="../js/built.js"></script>
-<script src="../lib/simpler-sidebar/dist/jquery.simpler-sidebar.min.js"></script>
+<script src="http://dcdeiv.github.io/simpler-sidebar/bower_components/simpler-sidebar/dist/jquery.simpler-sidebar.min.js"></script>
 <script>
 $( document ).ready(function() {
-    $.ajaxSetup({
+  $.ajaxSetup({
 		cache: false
 	});
 
-	$( '#support-section' ).load( 'http://dcdeiv.github.io/simpler-sidebar/support.html' );
-	$( '#download' ).load( 'http://dcdeiv.github.io/simpler-sidebar/download.html' );
+  $('#toolbar').load('http://dcdeiv.github.io/simpler-sidebar/toolbar.html');
+  $('#support').load('http://dcdeiv.github.io/simpler-sidebar/support.html');
 
-    $( '#main-navbar' ).load( 'http://dcdeiv.github.io/simpler-sidebar/navbar.html', function() {
-        $( '#download-pkg' ).URLrelease( 'simpler-sidebar' );
-
-        $( '#sidebar' ).load( 'http://dcdeiv.github.io/simpler-sidebar/sidebar.html' )
-            .simplerSidebar({
-                top: 64,
-                opener: '#toggle-sidebar',
-                attr: 'simplersidebar',
-                animation: {
-                    easing: "easeOutQuint"
-                },
-                sidebar: {
-                    align: 'left',
-                    width: 300,
-                    closingLinks: '.close-sb',
-                }
-            });
+  $('#sidenav')
+    .load('http://dcdeiv.github.io/simpler-sidebar/sidenav.html')
+    .simplerSidebar({
+      opener: '#toggle-sidenav',
+      animation: {
+          easing: 'easeOutQuint'
+      },
+      sidebar: {
+          align: 'left',
+          width: 320,
+          closingLinks: 'a',
+          css: {
+            zIndex: 3000
+          }
+      }
     });
-
-    $( '#footer' ).load( 'http://dcdeiv.github.io/simpler-sidebar/footer.html' );
 });
 </script>
 </body>
