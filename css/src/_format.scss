@@ -8,7 +8,7 @@ body, html {
 
 a {
   text-decoration: none;
-  
+
   &:link {
     color: $primary-color;
   }
@@ -55,7 +55,7 @@ nav {
   }
 }
 
-pre {
+pre, code {
   padding: 8px;
   font-size: 12px !important;
   background-color: $primary-text;
