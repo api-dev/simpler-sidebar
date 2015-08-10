@@ -89,25 +89,25 @@ $( document ).ready(function() {
 		cache: false
 	});
 
-  $('#toolbar').load('http://dcdeiv.github.io/simpler-sidebar/toolbar.html');
-  $('#support').load('http://dcdeiv.github.io/simpler-sidebar/support.html');
-
-  $('#sidenav')
-    .load('http://dcdeiv.github.io/simpler-sidebar/sidenav.html')
-    .simplerSidebar({
-      opener: '#toggle-sidenav',
-      animation: {
-          easing: 'easeOutQuint'
-      },
-      sidebar: {
-          align: 'right',
-          width: 320,
-          closingLinks: 'a',
-          css: {
-            zIndex: 3000
-          }
-      }
-    });
+  $('#toolbar').load('http://dcdeiv.github.io/simpler-sidebar/toolbar.html', function() {
+    $('#support').load('http://dcdeiv.github.io/simpler-sidebar/support.html');
+    $('#sidenav')
+      .load('http://dcdeiv.github.io/simpler-sidebar/sidenav.html')
+      .simplerSidebar({
+        opener: '#toggle-sidenav',
+        animation: {
+            easing: 'easeOutQuint'
+        },
+        sidebar: {
+            align: 'right',
+            width: 320,
+            closingLinks: 'a',
+            css: {
+              zIndex: 3000
+            }
+        }
+      });
+  });
 });
 </script>
 </body>
