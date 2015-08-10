@@ -56,9 +56,16 @@ nav {
 }
 
 pre, code {
-  padding: 8px;
   font-size: 12px !important;
   background-color: $primary-text;
   color: #ffffff;
   @include borderRadius(2px);
+}
+
+pre {
+  padding: 8px;
+}
+
+code {
+  padding: 2px 4px;
 }
