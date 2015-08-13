@@ -99,16 +99,17 @@ $( document ).ready(function() {
       .load('http://dcdeiv.github.io/simpler-sidebar/sidenav.html')
       .simplerSidebar({
         opener: '#toggle-sidenav',
+        top: 30,
         animation: {
-            easing: 'easeOutQuint'
+          easing: 'easeOutQuint'
         },
         sidebar: {
-            align: 'left',
-            width: 320,
-            closingLinks: 'a',
-            css: {
-              zIndex: 3000
-            }
+          align: 'left',
+          width: 320,
+          closingLinks: 'a',
+          css: {
+            zIndex: 3000
+          }
         }
       });
   });
