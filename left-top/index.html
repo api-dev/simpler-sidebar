@@ -94,12 +94,14 @@ $( document ).ready(function() {
 	});
 
   $('#toolbar').load('http://dcdeiv.github.io/simpler-sidebar/toolbar.html', function() {
+    var h = $(this).outerHeight();
+
     $('#support').load('http://dcdeiv.github.io/simpler-sidebar/support.html');
     $('#sidenav')
       .load('http://dcdeiv.github.io/simpler-sidebar/sidenav.html')
       .simplerSidebar({
         opener: '#toggle-sidenav',
-        top: 30,
+        top: h,
         animation: {
           easing: 'easeOutQuint'
         },
