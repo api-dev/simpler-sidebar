@@ -1,0 +1,27 @@
+---
+title: simpler-sidebar - right
+description: right
+top: 0
+align: right
+---
+:markdown
+	Read the entire set-up guide [here](http://dcdeiv.github.io/simpler-sidebar/index.html#getting-started)
+
+	## simpler-sidebar Right options:
+
+%pre
+	:escaped
+
+		$( document ).ready(function() {
+		  $( '#sidebar' ).simplerSidebar({
+		    opener: '#toggle-sidebar',
+		    attr: 'simplersidebar',
+		    animation: {
+		      easing: 'easeOutQuint'
+		    },
+		    sidebar: {
+		      width: 300,
+		      closingLinks: '.close-sb',
+		    }
+		  });
+		});
