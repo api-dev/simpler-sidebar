@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+  <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+  <meta charset='utf-8'>
+  <meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' name='viewport'>
+  <meta content='#F44336' name='theme-color'>
+  <link href='images/logo/192.png' rel='icon' sizes='192x192' type='image/png'>
+  <link href='images/logo/favicon.ico' rel='shortcut icon' type='image/ico'>
+  <meta content='simpler-sidebar, simpler sidebar, simple, simpler, sidebar, jquery, javascript, plugin, jquery plugin, dcdeiv, davidedc, sidebar left, sidebar right' name='keywords'>
+  <meta content='A simple side nav in jQuery' name='description'>
+  <meta content='en' name='language'>
+  <meta content='Davide Di Criscito' name='author'>
+  <meta content='Davide Di Criscito' name='owner'>
+  <meta content='Global' name='coverage'>
+  <meta content='General' name='rating'>
+  <meta content='all' name='target'>
+  <meta content='True' name='HandheldFriendly'>
+  <meta content='http://dcdeiv.github.io/simpler-sidebar' name='url'>
+  <meta content='http://dcdeiv.github.io/simpler-sidebar' name='identifier-URL'>
+  <title>simpler-sidebar - left-top</title>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Roboto+Condensed:400,700,300|Roboto+Mono:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://cdn.materialdesignicons.com/1.4.57/css/materialdesignicons.min.css' rel='stylesheet' type='text/css'>
+  <link href='http://yui.yahooapis.com/pure/0.6.0/pure-min.css' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/main.css" rel="stylesheet" />
+  <!--[if lte IE 8]>
+    <link href='http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&amp;pure/0.6.0/grids-min.css&amp;pure/0.6.0/grids-responsive-old-ie-min.css' rel='stylesheet' type='text/css'>
+  <![endif]-->
+  <!--[if gt IE 8]>
+    <link href='http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&amp;pure/0.6.0/grids-min.css&amp;pure/0.6.0/grids-responsive-min.css' rel='stylesheet' type='text/css'>
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js'></script>
+  <![endif]-->
+</head>
+<body>
+  <div class='toolbar'>
+    <div class='pure-g toolbar-fixed toolbar-rtl' id='toolbar'>
+      <div class='pure-u-5-8'>
+        <div class='title'>
+          <a href='http://dcdeiv.github.io/simpler-sidebar'>simpler-sidebar</a>
+        </div>
+      </div>
+      <div class='toolbar-nav-icons pure-u-3-8'>
+        <nav>
+          <ul>
+            <li class='icon'>
+              <a href='https://www.github.com/dcdeiv/simpler-sidebar' target='_blank'>
+                <i class='mdi mdi-github-circle'></i>
+              </a>
+            </li>
+            <li class='icon'>
+              <a href='https://github.com/dcdeiv/simpler-sidebar/releases/latest' target='_blank'>
+                <i class='mdi mdi-package-down'></i>
+              </a>
+            </li>
+            <li class='icon'>
+              <i class='mdi mdi-menu' id='toggle-sidenav'></i>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class='pure-g toolbar-header'>
+      <div class='pure-u-1'>
+        <h1>simpler-sidebar</h1>
+        <p>left-top</p>
+      </div>
+    </div>
+  </div>
+  <div class='main'>
+    <div class='section' id='guide'>
+      <p>Press the <i class="mdi mdi-menu"></i> icon in the top left corner of this page to run simpler-sidebar.</p></p>
+    </div>
+    <p>Read the entire set-up guide <a href="http://dcdeiv.github.io/simpler-sidebar/index.html#getting-started">here</a></p>
+    
+    <h2 id="simpler-sidebar-right-options">simpler-sidebar Right options:</h2>
+    <pre>$( document ).ready(function() {
+      $( '#sidebar' ).simplerSidebar({
+        top: 46,
+        opener: '#toggle-sidebar',
+        attr: 'simplersidebar',
+        animation: {
+          easing: 'easeOutQuint'
+        },
+        sidebar: {
+          align: 'left',
+          width: 300,
+          closingLinks: '.close-sb',
+        }
+      });
+    });</pre>
+  </div>
+  <div class='sidenav sidenav-left' id='#sidenav'>
+    <div class='sidenav-wrapper'>
+      <header class='sidenav-header'>simpler-sidebar</header>
+      <nav class='sidenav-menu'>
+        <ul>
+          <li>
+            <a href='#download'>Download</a>
+          </li>
+          <li>
+            <a href='#getting-started'>Getting Started</a>
+          </li>
+          <li>
+            <a href='#options'>Options</a>
+            <ul>
+              <li>
+                <a href='#options-list'>Options List</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href='#contributing'>Contributing</a>
+          </li>
+          <li>
+            <a href='#release-history'>Release History</a>
+          </li>
+          <li>
+            <a href='#license'>License</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class='sidenav-menu'>
+        <header class='sidenav-menu-header'>Demos</header>
+        <ul>
+          <li>
+            <a href='http://dcdeiv.github.io/simpler-sidebar/right'>Right</a>
+          </li>
+          <li>
+            <a href='http://dcdeiv.github.io/simpler-sidebar/right-top'>Right-Top</a>
+          </li>
+          <li>
+            <a href='http://dcdeiv.github.io/simpler-sidebar/left'>Left</a>
+          </li>
+          <li>
+            <a href='http://dcdeiv.github.io/simpler-sidebar/left-top'>Left-top</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <script src="/javascripts/googleanalytics.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+  <script src='http://dcdeiv.github.io/simpler-sidebar/bower_components/simpler-sidebar/dist/jquery.simpler-sidebar.min.js'></script>
+  <script>
+    $('#sidenav').simplerSidebar({
+    	opener: '#toggle-sidenav',
+    	top: 46,
+    	animation: {
+    		easing: 'easeOutQuint'
+    	},
+    	sidebar: {
+    		align: 'left',
+    		width: 320,
+    		closingLinks: 'a',
+    		css: {
+    			zIndex: 3000
+    		}
+    	}
+    });
+  </script>
+</body>

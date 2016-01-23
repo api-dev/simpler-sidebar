@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+  <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+  <meta charset='utf-8'>
+  <meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' name='viewport'>
+  <meta content='#F44336' name='theme-color'>
+  <link href='images/logo/192.png' rel='icon' sizes='192x192' type='image/png'>
+  <link href='images/logo/favicon.ico' rel='shortcut icon' type='image/ico'>
+  <meta content='simpler-sidebar, simpler sidebar, simple, simpler, sidebar, jquery, javascript, plugin, jquery plugin, dcdeiv, davidedc, sidebar left, sidebar right' name='keywords'>
+  <meta content='A simple side nav in jQuery' name='description'>
+  <meta content='en' name='language'>
+  <meta content='Davide Di Criscito' name='author'>
+  <meta content='Davide Di Criscito' name='owner'>
+  <meta content='Global' name='coverage'>
+  <meta content='General' name='rating'>
+  <meta content='all' name='target'>
+  <meta content='True' name='HandheldFriendly'>
+  <meta content='http://dcdeiv.github.io/simpler-sidebar' name='url'>
+  <meta content='http://dcdeiv.github.io/simpler-sidebar' name='identifier-URL'>
+  <title>simpler-sidebar</title>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Roboto+Condensed:400,700,300|Roboto+Mono:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://cdn.materialdesignicons.com/1.4.57/css/materialdesignicons.min.css' rel='stylesheet' type='text/css'>
+  <link href='http://yui.yahooapis.com/pure/0.6.0/pure-min.css' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/main.css" rel="stylesheet" />
+  <!--[if lte IE 8]>
+    <link href='http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&amp;pure/0.6.0/grids-min.css&amp;pure/0.6.0/grids-responsive-old-ie-min.css' rel='stylesheet' type='text/css'>
+  <![endif]-->
+  <!--[if gt IE 8]>
+    <link href='http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&amp;pure/0.6.0/grids-min.css&amp;pure/0.6.0/grids-responsive-min.css' rel='stylesheet' type='text/css'>
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js'></script>
+  <![endif]-->
+</head>
+<body>
+  <div class='toolbar'>
+    <div class='toolbar-fixed pure-g' id='toolbar'>
+      <div class='pure-u-5-8'>
+        <div class='title'>
+          <a href='http://dcdeiv.github.io/simpler-sidebar'>simpler-sidebar</a>
+        </div>
+      </div>
+      <div class='toolbar-nav-icons pure-u-3-8'>
+        <nav>
+          <ul>
+            <li class='icon'>
+              <a href='https://www.github.com/dcdeiv/simpler-sidebar' target='_blank'>
+                <i class='mdi mdi-github-circle'></i>
+              </a>
+            </li>
+            <li class='icon'>
+              <a href='https://github.com/dcdeiv/simpler-sidebar/releases/latest' target='_blank'>
+                <i class='mdi mdi-package-down'></i>
+              </a>
+            </li>
+            <li class='icon'>
+              <i class='mdi mdi-menu' id='toggle-sidenav'></i>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class='pure-g toolbar-header'>
+      <div class='pure-u-1'>
+        <h1>simpler-sidebar</h1>
+        <p>a simple side nav in jQuery</p>
+      </div>
+    </div>
+  </div>
+  <div class='main'>
+    <div class='section' id='guide'>
+      <p>Press the <i class="mdi mdi-menu"></i> icon in the top right corner of this page to run simpler-sidebar.</p></p>
+    </div>
+    <p>A jQuery plugin that allows to <em>create a side nav</em> as in modern mobile apps. It aims to <em>simplicity</em> so that <em>everybody can use it</em> no matter if expert programmers or not.</p>
+    
+    <p><strong>simpler-sidebar</strong> is a fork of <a href="https://github.com/dcdeiv/simple-sidebar"><em>simple-sidebar</em></a>.</p>
+    <ul>
+      <li>
+        <a href='#download'>Download</a>
+      </li>
+      <li>
+        <a href='#getting-started'>Getting Started</a>
+      </li>
+      <li>
+        <a href='#options'>Options</a>
+        <ul>
+          <li>
+            <a href='#options-list'>Options List</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href='#contributing'>Contributing</a>
+      </li>
+      <li>
+        <a href='#release-history'>Release History</a>
+      </li>
+      <li>
+        <a href='#license'>License</a>
+      </li>
+    </ul>
+    <div class='section anchor' id='download'>
+      <h2 id="download">Download</h2>
+      
+      <p>Run one of these commands in your bash according to your needs.</p>
+      
+      <p><code>git clone https://github.com/dcdeiv/simpler-sidebar.git</code></p>
+      
+      <p><code>bower install simpler-sidebar</code></p>
+      
+      <p><code>npm install simpler-sidebar</code></p>
+      
+      <p>Or download the latest version from the <a href="https://github.com/dcdeiv/simpler-sidebar/releases">releases</a> page.</p>
+      
+      <p>If you are updating, remember to read the <a href="#release-history">Release History</a> and to check for incompatibility issues.</p>
+    </div>
+    <div class='section anchor' id='getting-started'>
+      <h2 id="getting-started">Getting Started</h2>
+      
+      <p>You will need to prepare a specified HTML template in order to make it work properly. The code below is just an example from which you can and have to draw inspiration. Along with this plugin you are provided with some demo pages in the <a href="https://github.com/dcdeiv/simpler-sidebar/tree/master/demo">demo</a> directory.</p>
+      <pre>&lt;div id=&quot;navbar&quot;&gt;
+      	&lt;!-- #navbar is positioned fixed. --&gt;
+      
+      	&lt;span id=&quot;toggle-sidebar&quot; class=&quot;button icon&quot;&gt;
+      		&lt;!--
+      		It does not matter what element #toggle-sidebar is, give it a selector (in this example #toggle-sidebar).
+      		--&gt;
+      	&lt;/span&gt;
+      &lt;/div&gt;
+      
+      &lt;div id=&quot;sidebar&quot;&gt;
+      	&lt;!--
+      	simpler-sidebar will handle #sidebar's position.
+      
+      	To let the content of your sidebar overflow, especially when you have a lot of content in it, you have to add a &quot;wrapper&quot; that wraps all content.
+      	--&gt;
+      	&lt;div id=&quot;sidebar-wrapper&quot; class=&quot;sidebar-wrapper&quot;&gt;
+      		&lt;!--
+      		Links below are just an example. Give each clickable element, for example links, a class to trigger the closing animation.
+      		--&gt;
+      		&lt;a class=&quot;close-sidebar&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+      		&lt;a class=&quot;close-sidebar&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+      		&lt;a class=&quot;close-sidebar&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+      		&lt;a class=&quot;close-sidebar&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+      	&lt;/div&gt;
+      &lt;/div&gt;</pre>
+      <p>If you add the sidebar-wrapper (and you should), remember to give it this style attributes:</p>
+      <pre>.sidebar-wrapper {
+      	position: relative;
+      	height: 100%;
+      	overflow: auto;
+      }</pre>
+      <p>At the bottom of the web page, just before the <code>&lt;/body&gt;</code> tag, include the <strong>jQuery</strong> library. If you are interested in better <em>easing</em>, include the <strong>jQuery-UI</strong> library too. Eventually include simpler-sidebar.</p>
+      <pre>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;simpler-sidebar/dist/jquery.simpler-sidebar.min.js&quot;&gt;&lt;/script&gt;</pre>
+      <p>Call the simpler-sidebar plugin function and fill it with the options you need. Here is an example of some required options. Read the <a href="#options">Options</a> section for further informations.</p>
+    </div>
+    <div class='section anchor' id='options'>
+      <h2 id="options">Options</h2>
+      <p>You can access options in two ways.</p>
+      
+      <p>The first way is to add an option in the plugin itself. For example:</p>
+      <pre>$('#sidebar').simplerSidebar({
+      	opener: '#toggle-sidebar',
+      	animation: {
+      		duration: 1000,
+      		easing: 'easeInOutBounce'
+      	},
+      	sidebar: {
+      		align: 'right',
+      		width: 500,
+      		closingLinks: '.close'
+      	},
+      	mask: {
+      		display: false
+      	}
+      });</pre>
+      <p>The second way to access options is by using the following key:</p>
+      
+      <p><code>$.fn.simplerSidebar.settings</code></p>
+      
+      <p>After this key, you have to add the proper option, for example:</p>
+      
+      <p><code>$.fn.simplerSidebar.settings.animation.duration = 1000</code></p>
+      
+      <p>All keys must be put above the main plugin function and there should not be duplicates between them since keys override the options in the plugin function. Read the <a href="#options-list">Options List</a> for further informations about all available options.</p>
+      
+      <p>According to the example above, here is the other way to tweak options by using the key:</p>
+      <pre>$.fn.simplerSidebar.settings.animation.duration = 1000;
+      $.fn.simplerSidebar.settings.animation.easing = 'easeInOutBounce';
+      $.fn.simplerSidebar.settings.sidebar.align = 'right';
+      $.fn.simplerSidebar.settings.sidebar.width = 500;
+      $.fn.simplerSidebar.settings.sidebar.closingLinks = '.close';
+      $.fn.simplerSidebar.settings.mask.display = false;
+      
+      $('#sidebar').simplerSidebar({
+      	opener: '#toggle-sidebar',
+      });</pre>
+      <p>You can also override multiple options by using the key but it is not safe and it could be buggy, especially when you try to override <code>sidebar</code>. However you can safely override <code>css</code> such as <code>$.fn.simplerSidebar.settings.mask.css</code>, for example:</p>
+      <pre>$.fn.simplerSidebar.settings.mask.css = {
+      	backgroundColor: 'black',
+      	opacity: 0.5,
+      	filter: 'Alpha(opacity=50)'
+      };</pre>
+    </div>
+    <div class='section anchor' id='options-list'>
+      <h3 id="options-list">Options List</h3>
+      <ul>
+        <li><strong>opener</strong>: selector for the button/icon that will trigger the animation.</li>
+        <li><strong>attr</strong>: is the <code>data-*</code> attribute that makes the plugin works. If <code>simplersidebar</code> is somehow causing you issues, you can change it.</li>
+        <li><strong>top</strong>: is the <code>position-top</code> of the entire plugin. You can choose whatever number you want (better if you choose it according to the navbar's height) or let it be 0 by ignoring it.</li>
+        <li><strong>animation</strong>:
+          <ul>
+            <li><strong>duration</strong>: the duration of the animation in milliseconds.</li>
+            <li><strong>easing</strong>: the type of animation. For more animations include the <em>jQuery-UI</em> library and check out <a href="https://jqueryui.com/easing/">this page</a>. I strongly suggest not to play with easing because they haven't been tested all yet. I suggest to use simple easing like <code>easeOutQuint</code>.</li>
+          </ul>
+        </li>
+        <li><strong>sidebar</strong>:
+          <ul>
+            <li><strong>align</strong>: default is <code>undefined</code> which means that is aligned to <em>right</em>. If you want to align it to left, write <code>left</code>.</li>
+            <li><strong>width</strong>: the max width of the sidebar, this option is default to 300, please change it as you please.</li>
+            <li><strong>gap</strong>: the gap is the space between the left margin of the sidebar and the left side of the window (and viceversa). It is useful so that the user can click that space to close the sidebar.</li>
+            <li><strong>closingLinks</strong>: links or elements that close the sidebar. I suggest to choose a class and give it to all links and other elements such as icons, banner, images, etc, that are links or that are supposed to be clicked. By default it is <code>a</code> so every link in the sidebar will close the sidebar. You can use multiple selectors too but, avoid using nested selector otherwise the function will be triggered twice. For example you can select <code>'a, .close-sidebar'</code> but if an element is <code>&lt;a class=".close-sidebar"&gt;</code> the animation will be triggered twice.</li>
+            <li><strong>css</strong>: here you can store all css, anyway I suggest not to add more css attributes to the one below.
+              <ul>
+                <li><strong>zIndex</strong>: by default is is 3000 but you have to change it to the higher z-index number in your css plus 1.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><strong>mask</strong>:
+          <ul>
+            <li><strong>display</strong>: <code>true</code> or <code>false</code>. <code>false</code> will remove this option.</li>
+            <li><strong>css</strong>: here you can store all css attributes to give the mask div. However I suggest to do it in your css file except for these below. You can call this div by its data attribute for example: <code>[data-simplersidebar="mask"]</code>.
+              <ul>
+                <li><strong>backgroundColor</strong>: the color of the mask. By default is <code>'black'</code>.</li>
+                <li><strong>opacity</strong>: by default is 0.5.</li>
+                <li><strong>filter</strong>: IE opacity 0.5 = 50 and so on: <code>'Alpha(opacity=50)'</code>.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class='section anchor' id='contributing'>
+      <h2 id="contribuiting">Contribuiting</h2>
+      
+      <p>Help me improve simpler-sidebar and make it as perfect as possible, but first read the <a href="https://github.com/dcdeiv/simpler-sidebar/blob/master/CONTRIBUTING.md">contribution guidelines</a>.</p>
+    </div>
+    <div class='section anchor' id='release-history'>
+      <h2 id="release-history">Release History</h2>
+      <ul>
+        <li><strong>v1.4.5</strong> (2016-01-22) -
+          <ul>
+            <li>Update copyright.</li>
+            <li>Add support to jQuery v1.12.0.</li>
+          </ul>
+        </li>
+        <li><strong>v1.4.3</strong> (2015-12-13) -
+          <ul>
+            <li>Add support to jQuery v1.11.3.</li>
+            <li>Rename <code>tests</code> folder to <code>demo</code>.</li>
+            <li>Rename demo pages.</li>
+            <li>Fix README (<a href="https://github.com/dcdeiv/simpler-sidebar/issues/14">#14</a>).</li>
+            <li>Release under MIT and GPL-2.0 licenses.</li>
+          </ul>
+        </li>
+        <li><strong>v1.4.0</strong> (2015-08-19) - Fix resize issue <a href="https://github.com/dcdeiv/simpler-sidebar/issues/7">#7</a>.</li>
+        <li><strong>v1.3.4</strong> (2015-07-08) - Enhancement in the README.md, package.json, and bower.json files.</li>
+        <li><strong>v1.3.3</strong> (2015-07-02) -
+          <ul>
+            <li>Add Grunt. Simpler-Sidebar files are moved to <code>dist/</code> and renamed to <em>jquery.simpler-sidebar.js</em> and <em>jquery.simpler-sidebar.min.js</em>.</li>
+            <li>Fix <em>sidebar.closingLinks</em> and <em>sidebar.align</em>.</li>
+          </ul>
+        </li>
+        <li><strong>v1.2.3</strong> (2015-06-23) - Fix animations functions.</li>
+        <li><strong>v1.2.2</strong> (2015-06-16) - Add jQuery as dependency of NPM and Bower (<a href="https://github.com/dcdeiv/simpler-sidebar/pull/3">#3</a>)</li>
+        <li><strong>v1.2.0</strong> (2015-05-18) - Add support to AJAX and <em>mask.display</em>, change <em>dataName</em> to <em>attr</em>;</li>
+        <li><strong>v1.1.1</strong> (2015-05-15) - Add support to <em>left sidebar</em>.</li>
+        <li><strong>v1.0.0</strong> (2015-05-14) - Initial release.</li>
+      </ul>
+    </div>
+    <div class='section anchor' id='license'>
+      <h2 id="license">License</h2>
+      
+      <p>Copyright (c) 2015 - 2016 Davide Di Criscito.</p>
+      
+      <p>Dual licensed under the <a href="https://github.com/dcdeiv/simpler-sidebar/blob/master/LICENSE-MIT">MIT</a> and <a href="https://github.com/dcdeiv/simpler-sidebar/blob/master/LICENSE-GPL">GPL-2.0</a> licenses.</p>
+    </div>
+  </div>
+  <div class='sidenav sidenav-right' id='#sidenav'>
+    <div class='sidenav-wrapper'>
+      <header class='sidenav-header'>simpler-sidebar</header>
+      <nav class='sidenav-menu'>
+        <ul>
+          <li>
+            <a href='#download'>Download</a>
+          </li>
+          <li>
+            <a href='#getting-started'>Getting Started</a>
+          </li>
+          <li>
+            <a href='#options'>Options</a>
+            <ul>
+              <li>
+                <a href='#options-list'>Options List</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href='#contributing'>Contributing</a>
+          </li>
+          <li>
+            <a href='#release-history'>Release History</a>
+          </li>
+          <li>
+            <a href='#license'>License</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class='sidenav-menu'>
+        <header class='sidenav-menu-header'>Demos</header>
+        <ul>
+          <li>
+            <a href='http://dcdeiv.github.io/simpler-sidebar/right'>Right</a>
+          </li>
+          <li>
+            <a href='http://dcdeiv.github.io/simpler-sidebar/right-top'>Right-Top</a>
+          </li>
+          <li>
+            <a href='http://dcdeiv.github.io/simpler-sidebar/left'>Left</a>
+          </li>
+          <li>
+            <a href='http://dcdeiv.github.io/simpler-sidebar/left-top'>Left-top</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <script src="/javascripts/googleanalytics.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+  <script src='http://dcdeiv.github.io/simpler-sidebar/bower_components/simpler-sidebar/dist/jquery.simpler-sidebar.min.js'></script>
+  <script>
+    $('#sidenav').simplerSidebar({
+    	opener: '#toggle-sidenav',
+    	top: 0,
+    	animation: {
+    		easing: 'easeOutQuint'
+    	},
+    	sidebar: {
+    		align: 'right',
+    		width: 320,
+    		closingLinks: 'a',
+    		css: {
+    			zIndex: 3000
+    		}
+    	}
+    });
+  </script>
+</body>
