@@ -120,42 +120,11 @@
       <h2 id="getting-started">Getting Started</h2>
       
       <p>You will need to prepare a specified HTML template in order to make it work properly. The code below is just an example from which you can and have to draw inspiration. Along with this plugin you are provided with some demo pages in the <a href="https://github.com/dcdeiv/simpler-sidebar/tree/master/demo">demo</a> directory.</p>
-      <pre>&lt;div id=&quot;navbar&quot;&gt;
-      	&lt;!-- #navbar is positioned fixed. --&gt;
-      
-      	&lt;span id=&quot;toggle-sidebar&quot; class=&quot;button icon&quot;&gt;
-      		&lt;!--
-      		It does not matter what element #toggle-sidebar is, give it a selector (in this example #toggle-sidebar).
-      		--&gt;
-      	&lt;/span&gt;
-      &lt;/div&gt;
-      
-      &lt;div id=&quot;sidebar&quot;&gt;
-      	&lt;!--
-      	simpler-sidebar will handle #sidebar's position.
-      
-      	To let the content of your sidebar overflow, especially when you have a lot of content in it, you have to add a &quot;wrapper&quot; that wraps all content.
-      	--&gt;
-      	&lt;div id=&quot;sidebar-wrapper&quot; class=&quot;sidebar-wrapper&quot;&gt;
-      		&lt;!--
-      		Links below are just an example. Give each clickable element, for example links, a class to trigger the closing animation.
-      		--&gt;
-      		&lt;a class=&quot;close-sidebar&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
-      		&lt;a class=&quot;close-sidebar&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
-      		&lt;a class=&quot;close-sidebar&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
-      		&lt;a class=&quot;close-sidebar&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
-      	&lt;/div&gt;
-      &lt;/div&gt;</pre>
+      <pre>&lt;div id=&quot;navbar&quot;&gt;&#x000A;	&lt;!-- #navbar is positioned fixed. --&gt;&#x000A;&#x000A;	&lt;span id=&quot;toggle-sidebar&quot; class=&quot;button icon&quot;&gt;&#x000A;		&lt;!--&#x000A;		It does not matter what element #toggle-sidebar is, give it a selector (in this example #toggle-sidebar).&#x000A;		--&gt;&#x000A;	&lt;/span&gt;&#x000A;&lt;/div&gt;&#x000A;&#x000A;&lt;div id=&quot;sidebar&quot;&gt;&#x000A;	&lt;!--&#x000A;	simpler-sidebar will handle #sidebar's position.&#x000A;&#x000A;	To let the content of your sidebar overflow, especially when you have a lot of content in it, you have to add a &quot;wrapper&quot; that wraps all content.&#x000A;	--&gt;&#x000A;	&lt;div id=&quot;sidebar-wrapper&quot; class=&quot;sidebar-wrapper&quot;&gt;&#x000A;		&lt;!--&#x000A;		Links below are just an example. Give each clickable element, for example links, a class to trigger the closing animation.&#x000A;		--&gt;&#x000A;		&lt;a class=&quot;close-sidebar&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;&#x000A;		&lt;a class=&quot;close-sidebar&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;&#x000A;		&lt;a class=&quot;close-sidebar&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;&#x000A;		&lt;a class=&quot;close-sidebar&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;&#x000A;	&lt;/div&gt;&#x000A;&lt;/div&gt;</pre>
       <p>If you add the sidebar-wrapper (and you should), remember to give it this style attributes:</p>
-      <pre>.sidebar-wrapper {
-      	position: relative;
-      	height: 100%;
-      	overflow: auto;
-      }</pre>
+      <pre>.sidebar-wrapper {&#x000A;	position: relative;&#x000A;	height: 100%;&#x000A;	overflow: auto;&#x000A;}</pre>
       <p>At the bottom of the web page, just before the <code>&lt;/body&gt;</code> tag, include the <strong>jQuery</strong> library. If you are interested in better <em>easing</em>, include the <strong>jQuery-UI</strong> library too. Eventually include simpler-sidebar.</p>
-      <pre>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-      &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
-      &lt;script src=&quot;simpler-sidebar/dist/jquery.simpler-sidebar.min.js&quot;&gt;&lt;/script&gt;</pre>
+      <pre>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;&#x000A;&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js&quot;&gt;&lt;/script&gt;&#x000A;&lt;script src=&quot;simpler-sidebar/dist/jquery.simpler-sidebar.min.js&quot;&gt;&lt;/script&gt;</pre>
       <p>Call the simpler-sidebar plugin function and fill it with the options you need. Here is an example of some required options. Read the <a href="#options">Options</a> section for further informations.</p>
     </div>
     <div class='section anchor' id='options'>
@@ -163,21 +132,7 @@
       <p>You can access options in two ways.</p>
       
       <p>The first way is to add an option in the plugin itself. For example:</p>
-      <pre>$('#sidebar').simplerSidebar({
-      	opener: '#toggle-sidebar',
-      	animation: {
-      		duration: 1000,
-      		easing: 'easeInOutBounce'
-      	},
-      	sidebar: {
-      		align: 'right',
-      		width: 500,
-      		closingLinks: '.close'
-      	},
-      	mask: {
-      		display: false
-      	}
-      });</pre>
+      <pre>$('#sidebar').simplerSidebar({&#x000A;	opener: '#toggle-sidebar',&#x000A;	animation: {&#x000A;		duration: 1000,&#x000A;		easing: 'easeInOutBounce'&#x000A;	},&#x000A;	sidebar: {&#x000A;		align: 'right',&#x000A;		width: 500,&#x000A;		closingLinks: '.close'&#x000A;	},&#x000A;	mask: {&#x000A;		display: false&#x000A;	}&#x000A;});</pre>
       <p>The second way to access options is by using the following key:</p>
       
       <p><code>$.fn.simplerSidebar.settings</code></p>
@@ -189,22 +144,9 @@
       <p>All keys must be put above the main plugin function and there should not be duplicates between them since keys override the options in the plugin function. Read the <a href="#options-list">Options List</a> for further informations about all available options.</p>
       
       <p>According to the example above, here is the other way to tweak options by using the key:</p>
-      <pre>$.fn.simplerSidebar.settings.animation.duration = 1000;
-      $.fn.simplerSidebar.settings.animation.easing = 'easeInOutBounce';
-      $.fn.simplerSidebar.settings.sidebar.align = 'right';
-      $.fn.simplerSidebar.settings.sidebar.width = 500;
-      $.fn.simplerSidebar.settings.sidebar.closingLinks = '.close';
-      $.fn.simplerSidebar.settings.mask.display = false;
-      
-      $('#sidebar').simplerSidebar({
-      	opener: '#toggle-sidebar',
-      });</pre>
+      <pre>$.fn.simplerSidebar.settings.animation.duration = 1000;&#x000A;$.fn.simplerSidebar.settings.animation.easing = 'easeInOutBounce';&#x000A;$.fn.simplerSidebar.settings.sidebar.align = 'right';&#x000A;$.fn.simplerSidebar.settings.sidebar.width = 500;&#x000A;$.fn.simplerSidebar.settings.sidebar.closingLinks = '.close';&#x000A;$.fn.simplerSidebar.settings.mask.display = false;&#x000A;&#x000A;$('#sidebar').simplerSidebar({&#x000A;	opener: '#toggle-sidebar',&#x000A;});</pre>
       <p>You can also override multiple options by using the key but it is not safe and it could be buggy, especially when you try to override <code>sidebar</code>. However you can safely override <code>css</code> such as <code>$.fn.simplerSidebar.settings.mask.css</code>, for example:</p>
-      <pre>$.fn.simplerSidebar.settings.mask.css = {
-      	backgroundColor: 'black',
-      	opacity: 0.5,
-      	filter: 'Alpha(opacity=50)'
-      };</pre>
+      <pre>$.fn.simplerSidebar.settings.mask.css = {&#x000A;	backgroundColor: 'black',&#x000A;	opacity: 0.5,&#x000A;	filter: 'Alpha(opacity=50)'&#x000A;};</pre>
     </div>
     <div class='section anchor' id='options-list'>
       <h3 id="options-list">Options List</h3>
