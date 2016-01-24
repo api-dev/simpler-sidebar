@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' name='viewport'>
+    <title>simpler-sidebar development playground</title>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
+    <link href='assets/style.css' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js'></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class='main-content' id='main'>
+      <div class='section'>
+        <header>
+          <h1 id="simpler-sidebar">simpler-sidebar</h1>
+          
+          <h2 id="development-playground">development playground</h2>
+        </header>
+      </div>
+      <div class='section'>
+        <p>Welcome to the simpler-sidebar development playground.</p>
+        
+        <p><em>Press the menu icon at the right corner of the page to navigate through this playground.</em></p>
+        
+        <p>This section of the simpler-sidebar website is used to test hotfix and pre-releases, so if you encounter any problems, go back to the <a href="http://dcdeiv.github.io/simpler-sidebar">main website</a>.</p>
+        
+        <p>This playground is delivered with the <a href="(https://github.com/dcdeiv/simpler-sidebar/releases)">simpler-sidebar plugin</a>, you can find it in the <a href="https://github.com/dcdeiv/simpler-sidebar/tree/master/demo">demo</a> directory.</p>
+        
+        <p><strong>If you need a guide to install the plugin, you are in the wrong place. Check the Getting Started guide in the <a href="http://dcdeiv.github.io/simpler-sidebar">main website</a> or directly on the simpler-sidebar github page <a href="https://github.com/dcdeiv/simpler-sidebar">at this link</a>.</strong></p>
+      </div>
+    </div>
+    <!-- div#main -->
+    <div class='main-navbar main-navbar-fixed-top' id='main-navbar'>
+      <div class='main-navbar-content'>
+        <div class='icon right' id='toggle-sidebar'>
+          <img alt='menu' height='24px' src='assets/menu32@64.png' width='24px'>
+        </div>
+      </div>
+    </div>
+    <!-- div#main-navbar -->
+    <div class='main-sidebar main-sidebar-right' id='main-sidebar'>
+      <div class='main-sidebar-wrapper' id='main-sidebar-wrapper'>
+        <div class='section'>
+          <h3>
+            <a href='index.html'>simpler-sidebar development</a>
+          </h3>
+        </div>
+        <div class='section'>
+          <h4>
+            <a href='http://dcdeiv.github.io/simpler-sidebar'>> Go Back to the Main Website <</a>
+          </h4>
+        </div>
+        <div class='section'>
+          <nav>
+            <ul>
+              <li class='close-sb'>
+                <a href='static-right.html'>Static Right</a>
+              </li>
+              <li class='close-sb'>
+                <a href='static-right-top.html'>Static Right-Top</a>
+              </li>
+              <li class='close-sb'>
+                <a href='static-left.html'>Static Left</a>
+              </li>
+              <li class='close-sb'>
+                <a href='static-left-top.html'>Static Left-Top</a>
+              </li>
+              <li class='close-sb'>
+                <a href='dynamic-right.html'>Dynamic Right</a>
+              </li>
+              <li class='close-sb'>
+                <a href='dynamic-right-top.html'>Dynamic Right-Top</a>
+              </li>
+              <li class='close-sb'>
+                <a href='dynamic-left.html'>Dynamic Left</a>
+              </li>
+              <li class='close-sb'>
+                <a href='dynamic-left-top.html'>Dynamic Left-Top</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class='section'>
+          <p>wo = without .close-sb class</p>
+          <p>w = with .close-sb class</p>
+        </div>
+        <nav>
+          <ul>
+            <li class='close-sb'>
+              <a href='#'>Link (w)</a>
+            </li>
+            <li>Not a link (wo)</li>
+            <li>
+              <a href='#'>Link (wo)</a>
+            </li>
+            <li class='close-sb'>Not a link (w)</li>
+            <li>
+              <a href='#'>Link (wo)</a>
+            </li>
+            <li>Not a link (wo)</li>
+            <li>
+              <a href='#'>Link (wo)</a>
+            </li>
+            <li>Not a link (wo)</li>
+            <li class='close-sb'>
+              <a href='#'>Link (w)</a>
+            </li>
+            <li class='close-sb'>Not a link (w)</li>
+            <li class='close-sb'>
+              <a href='#'>Link (w)</a>
+            </li>
+            <li class='close-sb'>Not a link (w)</li>
+            <li>
+              <a href='#'>Link (wo)</a>
+            </li>
+            <li>Not a link (wo)</li>
+            <li>
+              <a href='#'>Link (wo)</a>
+            </li>
+            <li class='close-sb'>Not a link (w)</li>
+            <li>
+              <a href='#'>Link (wo)</a>
+            </li>
+            <li class='close-sb'>Not a link (w)</li>
+            <li>
+              <a href='#'>Link (wo)</a>
+            </li>
+            <li class='close-sb'>Not a link (w)</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- div#main-sidebar -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+    <script src='simpler-sidebar/dist/jquery.simpler-sidebar.min.js'></script>
+    <script>
+      $(document).ready(function() {
+      	$('#main-sidebar').simplerSidebar({
+      		top: 0,
+      		opener: '#toggle-sidebar',
+      		animation: {
+      			easing: 'easeOutQuint'
+      		},
+      		sidebar: {
+      			align: 'right',
+      			closingLinks: '.close-sb'
+      		}
+      	});
+      });
+    </script>
+  </body>
+</html>
