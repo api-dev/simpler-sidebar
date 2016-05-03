@@ -1,19 +1,22 @@
 {
   "name": "simpler-sidebar",
-  "version": "1.4.5",
+  "version": "1.4.11",
   "description": "A simple side nav in jQuery.",
   "homepage": "https://github.com/dcdeiv/simpler-sidebar",
   "authors": [
     "Davide Di Criscito (https://github.com/dcdeiv)"
   ],
-  "license": ["MIT", "GPL-2.0"],
+  "license": "MIT AND GPL-2.0",
   "keywords": [
-    "simpler",
+		"simpler",
     "sidebar",
     "sidenav",
+    "side",
+    "nav",
     "simpler-sidebar",
     "jquery",
     "plugin",
+    "jquery-plugin",
     "plug-in",
     "javascript",
     "js"

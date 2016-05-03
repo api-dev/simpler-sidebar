@@ -124,8 +124,11 @@
       <p>If you add the sidebar-wrapper (and you should), remember to give it this style attributes:</p>
       <pre>.sidebar-wrapper {&#x000A;	position: relative;&#x000A;	height: 100%;&#x000A;	overflow: auto;&#x000A;}</pre>
       <p>At the bottom of the web page, just before the <code>&lt;/body&gt;</code> tag, include the <strong>jQuery</strong> library. If you are interested in better <em>easing</em>, include the <strong>jQuery-UI</strong> library too. Eventually include simpler-sidebar.</p>
-      <pre>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;&#x000A;&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js&quot;&gt;&lt;/script&gt;&#x000A;&lt;script src=&quot;simpler-sidebar/dist/jquery.simpler-sidebar.min.js&quot;&gt;&lt;/script&gt;</pre>
+      <pre>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js&quot;&gt;&lt;/script&gt;&#x000A;&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js&quot;&gt;&lt;/script&gt;&#x000A;&lt;script src=&quot;simpler-sidebar/dist/jquery.simpler-sidebar.min.js&quot;&gt;&lt;/script&gt;</pre>
       <p>Call the simpler-sidebar plugin function and fill it with the options you need. Here is an example of some required options. Read the <a href="#options">Options</a> section for further informations.</p>
+      <preserve>
+        &lt;script&gt;&#x000A;	$( document ).ready( function() {&#x000A;		$( &quot;#sidebar&quot; ).simplerSidebar( {&#x000A;			opener: &quot;#toggle-sidebar&quot;,&#x000A;			sidebar: {&#x000A;				align: &quot;left&quot;, //or &quot;right&quot; - This option can be ignored, the sidebar will automatically align to right.&#x000A;				width: 300, //You can ignore this option, the sidebar will automatically size itself to 300px.&#x000A;				closingLinks: &quot;.close-sidebar&quot; // If you ignore this option, the plugin will look for all links and this can be buggy. Choose a class for every object inside the sidebar that once clicked will close the sidebar.&#x000A;			}&#x000A;		} );&#x000A;	} );&#x000A;&lt;/script&gt;
+      </preserve>
     </div>
     <div class='section anchor' id='options'>
       <h2 id="options">Options</h2>
@@ -195,6 +198,12 @@
     <div class='section anchor' id='release-history'>
       <h2 id="release-history">Release History</h2>
       <ul>
+        <li><strong>v1.4.11</strong> (2016-05-02) -
+          <ul>
+            <li>Add support to Travis-ci.</li>
+            <li>Add support to jQuery v1.12.2.</li>
+          </ul>
+        </li>
         <li><strong>v1.4.5</strong> (2016-01-22) -
           <ul>
             <li>Update copyright.</li>
@@ -295,7 +304,7 @@
     </div>
   </div>
   <script src='http://dcdeiv.github.io/simpler-sidebar/javascripts/googleanalytics.js'></script>
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
   <script src='http://dcdeiv.github.io/simpler-sidebar/bower_components/simpler-sidebar/dist/jquery.simpler-sidebar.min.js'></script>
   <script>
